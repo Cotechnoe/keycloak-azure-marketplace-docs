@@ -88,3 +88,37 @@ Les pages suivantes sont des sources primaires consultées pour cadrer les thèm
 - Contrôle Python ponctuel en lecture seule : **réussi** — onze paires EN/FR, 22 pages publiques, 142 liens locaux résolus ; sélecteurs de langue réciproques, liens internes dans la langue choisie, correspondance ordonnée des liens et sources, parité structurelle des titres, listes, tableaux et avertissements, et numérotation identique.
 - Parité des blocs de commandes vérifiée : aucun exemple exécutable dans l’une ou l’autre langue. Aucun contrôle HTTP externe, rendu HTML ou test VM effectué à cette étape.
 - Aucun changement du code d’image ou des contrôles de certification. Les étapes 5 à 7 restent ouvertes ; aucun choix d’image ni publication n’est impliqué par cette livraison.
+
+## Validation locale du rendu — étape 6 partielle, 2026-11-09
+
+### Périmètre et méthode
+
+Le demandeur a autorisé la validation du rendu documentaire sans publication. La branche ne contient ni Makefile, ni configuration de site, ni moteur de publication. Le moteur Pandoc déjà installé sur le poste a donc produit un aperçu HTML autonome des 22 pages publiques, hors du dépôt, dans les fichiers de session.
+
+Le lecteur utilisé est `gfm-autolink_bare_uris` : tous les liens documentaires sont explicites ; désactiver les liens automatiques évite que Pandoc imbrique deux liens pour une adresse courriel déjà liée. La sortie est en HTML5 autonome avec langue `en` ou `fr`, titre de page sans duplication du titre principal et liens courriel sans masquage JavaScript. Les destinations `.md` sont remplacées par `.html` uniquement dans l’aperçu. Les sources ne sont pas modifiées.
+
+Un script Python ponctuel a contrôlé l’arbre documentaire Pandoc et le HTML produit. Les ajustements initiaux du validateur concernaient le traitement des courriels, le titre généré et les cases à cocher de Pandoc ; ils n’ont révélé aucun défaut à corriger dans les pages Markdown.
+
+### Résultats
+
+| Contrôle | Résultat et portée |
+|---|---|
+| Génération HTML locale | **Réussie :** 22 pages, onze paires EN/FR. Ce n’est pas le build du futur site. |
+| Structure | **Réussie :** langue HTML correcte, un titre principal par page, identifiants uniques, titres de section et tableaux conservés ; structure HTML des paires EN/FR identique. |
+| Tableaux et listes de contrôle | **Réussie :** dix tableaux et dix cases non cochées rendus, en correspondance avec les sources. |
+| Liens locaux dans le rendu | **Réussie :** 142 liens résolus vers les fichiers HTML générés ; ordre et destinations conservés après transformation des extensions. |
+| Navigation bilingue | **Réussie :** sélecteurs de langue réciproques et navigation dans la langue choisie, sauf changement volontaire de langue. |
+| Avertissements | **Réussie :** avertissement de validation conservé dans chacune des 22 pages. Ce contrôle ne qualifie pas les procédures. |
+| Liens externes | **Réussie :** GET avec `curl --location`, délai maximal 25 secondes par URL ; les 19 URL HTTPS distinctes donnent HTTP 200. Aucun contenu local ni identifiant transmis. Une réponse HTTP valide ne remplace pas une revue du fond. |
+| Accès HTTP à l’aperçu sur le poste | **Réussi :** HTTP 200 pour le démarrage rapide français, serveur lié uniquement à la boucle locale puis arrêté. |
+| Inspection visuelle dans le navigateur intégré | **Bloquée :** fichier de session hors des dossiers approuvés ; tentative HTTP locale non joignable depuis ce navigateur. Aucune capture, vérification visuelle ou mesure de mise en page mobile n’est revendiquée. |
+
+Les 19 URL contrôlées sont les références publiques des pages : les dix pages Microsoft Learn, les six pages Keycloak, la déclaration de confidentialité Microsoft et le chapitre de sauvegarde PostgreSQL, ainsi que le lien d’issues du dépôt public. Le détail exact fait foi dans les pages et dans la preuve locale de contrôle ; aucune URL du dépôt d’ingénierie n’est ajoutée.
+
+### Limites avant clôture de l’étape 6
+
+- L’aperçu et les résultats techniques sont conservés dans les fichiers de session, pas dans les sources publiables. Aucun moteur de site ni dépendance n’a été ajouté au dépôt.
+- Le choix de configuration du site et la validation de son rendu réel restent à faire ; cet aperçu n’établit ni les URL publiques, ni le thème, ni les réécritures de liens du futur hébergement.
+- Les liens requis par le listing Marketplace ne sont pas qualifiés par un contrôle de fichiers locaux ; aucune publication ou vérification Partner Center n’est réalisée.
+- Aucun test VM ou choix d’image ; l’étape 5 reste en attente de la cible. Aucune revue indépendante par un exploitant ni PR ; l’étape 7 reste ouverte.
+- L’étape 6 reste **non cochée** : le sous-ensemble local est validé, pas l’ensemble du critère de livraison.
