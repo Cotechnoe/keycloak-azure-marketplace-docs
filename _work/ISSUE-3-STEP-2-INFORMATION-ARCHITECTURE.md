@@ -1,12 +1,12 @@
 # Issue #3 — Étape 2 : parcours et architecture de l’information
 
-**Statut :** proposition d’architecture, à confirmer avant rédaction client
+**Statut :** parcours approuvé par le demandeur ; identification de l’image cible explicitement reportée
 
 Cette architecture cible la personne responsable de l’abonnement Azure et de la VM après son instanciation depuis Microsoft Marketplace. Le parcours suppose que le client a terminé l’action de déploiement dans Azure ; il ne présume ni que l’offre est actuellement publiée, ni d’un titre Marketplace, plan, SKU, version d’image, choix réseau ou service Azure déjà activé.
 
-La documentation sera bilingue anglais-français. Les noms de fichiers ci-dessous sont des slugs proposés, pas des pages déjà publiées. Tout comportement particulier à l’offre doit être vérifié sur l’image Marketplace retenue avant de devenir une instruction.
+La documentation sera bilingue anglais-français. Les noms de fichiers ci-dessous définissent la structure approuvée ; leur présence dans la branche de travail ne constitue pas une publication. Tout comportement particulier à l’offre doit être vérifié sur l’image Marketplace retenue avant de devenir une instruction.
 
-## Parcours proposé
+## Parcours approuvé
 
 | Ordre | Question de l’opérateur | Sujet et résultat attendu | Page proposée | Critères couverts |
 |---|---|---|---|---|
@@ -24,6 +24,7 @@ L’accueil (`README.md` et `README-fr.md`) devient le point d’entrée : il id
 ## Principes de navigation et de rédaction
 
 - Organiser les pages par tâche et dans l’ordre réel d’usage, avec titres à l’impératif.
+- Si HTTPS de confiance n’est pas encore établi, accomplir les prérequis DNS/TLS de l’étape 4 avant toute saisie d’identifiants à l’étape 3 ; la numérotation n’autorise pas à contourner une alerte de certificat.
 - Dans chaque procédure, présenter : objectif, prérequis, étapes, résultat attendu, dépannage/escalade et références applicables.
 - Indiquer qui agit : client dans Azure, opérateur de la VM/Keycloak, éditeur ou Microsoft. Ne pas promettre de SLA ou de responsabilité contractuelle non vérifiés.
 - Séparer les instructions Azure applicables en général des comportements réellement fournis ou préconfigurés par l’offre.
@@ -49,6 +50,7 @@ L’accueil (`README.md` et `README-fr.md`) devient le point d’entrée : il id
 Les pages suivantes sont des sources primaires consultées pour cadrer les thèmes. Leur existence ne signifie pas que les services correspondants sont activés, inclus ou configurés dans l’offre.
 
 - Microsoft, [architecture best practices for Azure Virtual Machines](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/virtual-machines) : fiabilité, dépendances, séparation des données, disponibilité.
+- Microsoft, [writing step-by-step instructions](https://learn.microsoft.com/en-us/style-guide/procedures-instructions/writing-step-by-step-instructions) : titres orientés tâche, instructions numérotées courtes, contexte d’exécution et verbes d’action.
 - Microsoft, [Network Security Groups overview](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview) : filtrage Azure par règles réseau.
 - Microsoft, [About Azure VM backup](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction) : périmètre et fonctionnement de la sauvegarde de VM ; ne démontre pas une sauvegarde applicativement cohérente de Keycloak/PostgreSQL pour cette offre.
 - Microsoft, [Azure Update Manager overview](https://learn.microsoft.com/en-us/azure/update-manager/overview) : gestion des mises à jour de machines ; la stratégie de mise à niveau du logiciel applicatif demeure à établir séparément.
@@ -61,4 +63,16 @@ Les pages suivantes sont des sources primaires consultées pour cadrer les thèm
 - Le demandeur indique que l’application n’est pas encore livrée sur Marketplace et que le déploiement est en cours. Les détails de l’offre et la cible d’image restent à confirmer par des données de déploiement effectives.
 - Le dépôt documentaire est distinct du dépôt d’ingénierie. Les preuves techniques internes restent dans l’inventaire d’étape 1 et ne deviennent pas des liens client.
 - Cette architecture ne constitue pas un parcours exécutable. Aucune commande, valeur de configuration ni procédure de récupération n’est validée par ce document.
-- Étape 3 : rédaction neuve à partir de cette structure, après validation des faits et confirmation de la cible lorsqu’elle sera disponible.
+- Étape 3 : rédaction anglaise neuve sur cette structure, autorisée par le demandeur sans attendre la sélection d’image. Les comportements propres à l’image restent des points de validation explicites, pas des procédures exécutables.
+
+## Livraison rédactionnelle de l’étape 3 — 2026-11-09
+
+- Dix pages anglaises rédigées à neuf : accueil, sept guides, support et confidentialité. Le français reste l’étape 4.
+- Consignes Azure génériques sourcées à proximité des passages concernés ; fonctionnalités amont Keycloak distinguées des capacités réellement configurées dans l’offre.
+- Aucun numéro de version, nom commercial final, port, chemin système ou commande propre à l’image ajouté aux guides. Les prérequis, contrôles et critères d’escalade sont rédigés ; les procédures exécutables propres à l’image restent à établir.
+- Les noms de services Azure décrivent des options documentées par Microsoft, pas des services déclarés inclus ou actifs.
+- Le contact `support@cotechnoe.com` est conservé depuis le cadrage documentaire approuvé et consigné dans le contexte du dépôt d’ingénierie ; aucun SLA, délai de réponse ou mécanisme de transfert confidentiel n’est promis.
+- Contrôle ponctuel Python en lecture seule : **réussi**, dix pages, 49 liens relatifs résolus, 28 références HTTPS (19 URL distinctes), sections de prérequis/résultats et listes numérotées présentes dans les sept guides. Aucun exemple de commande exécutable. Ce contrôle ne teste ni le statut HTTP externe, ni le HTML, ni la VM.
+- Le dépôt documentaire ne possède pas de Makefile ni de générateur de site sur cette base. Aucun `make check`, build HTML ou test VM n’est revendiqué.
+- Aucune modification du code d’image ou des contrôles de certification ; aucun test de certification requis pour qualifier ces changements exclusivement documentaires.
+- Ce livrable clôt la rédaction anglaise du brouillon, pas sa qualification opérationnelle ni la publication. La cible reportée empêche encore la validation des procédures propres à l’image ; les étapes 5 à 7 restent ouvertes.
