@@ -17,7 +17,7 @@ Have your Azure subscription and resource group, permission to inspect the deplo
 
 1. **Find your VM and check its Azure state.** In the Azure portal, locate the intended VM and record its deployment and power states. Leave application readiness marked as not verified until management access is available. See [Verify your deployment](docs/01-verify-deployment.md).
 2. **Confirm restricted VM access, then check application readiness.** Follow [Secure your Azure administration access](docs/02-secure-azure-access.md), then complete the application-readiness check in the deployment guide before continuing. Use only a procedure verified for your image; stop if it is unavailable. A running VM alone does not establish that Keycloak is ready. Do not open management access to all sources.
-3. **Verify the service address and trusted HTTPS.** Use the address confirmed by your deployment owner. Check that the intended client can reach it without a certificate warning. If not, complete [Configure your domain and trusted HTTPS](docs/04-configure-domain-and-tls.md) before entering credentials.
+3. **Verify the service address and trusted HTTPS.** Use the address confirmed by your deployment owner. Before entering credentials, complete the result checks in [Configure your domain and trusted HTTPS](docs/04-configure-domain-and-tls.md), even if HTTPS already works: client trust, intended URLs, a named renewal owner, a tested renewal process and detection of expiry or renewal failures. Do not reconfigure working HTTPS unnecessarily; apply only missing configuration through a procedure verified for your image.
 4. **Replace temporary administrator access.** Obtain initial credentials only through the mechanism confirmed for your image. Establish and test a permanent administrator in a separate session before removing temporary access and retiring its credential material. See [Complete your initial Keycloak access](docs/03-complete-initial-access.md).
 
 **Stop at an unverified image-specific procedure.** Do not guess a console URL, credential location, command or configuration value. Ask for the missing instructions through [support](SUPPORT.md) before continuing. Never bypass a certificate warning or remove your only working administrator.
@@ -26,7 +26,7 @@ Have your Azure subscription and resource group, permission to inspect the deplo
 
 - [ ] Azure resource state and application readiness have been checked separately.
 - [ ] Authorized operators have a verified, restricted management connection.
-- [ ] The agreed service address uses HTTPS trusted by the intended client.
+- [ ] The agreed service address uses HTTPS trusted by the intended client; certificate renewal has an owner, a tested process and defined failure detection.
 - [ ] Permanent administration works and temporary access no longer works.
 
 You may finish this administrative milestone here without an external application. It is **not production readiness** and does not demonstrate application integration.

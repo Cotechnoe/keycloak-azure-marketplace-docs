@@ -2,6 +2,29 @@
 
 **Statut :** parcours approuvé par le demandeur ; identification de l’image cible explicitement reportée
 
+## Préparation du merge comme brouillon
+
+La réserve de seconde lecture est corrigée en EN/FR : l’étape HTTPS du quick-start impose les contrôles du guide TLS même si HTTPS fonctionne déjà, notamment responsable, test et détection des échecs de renouvellement. Le critère de résultat reprend cette obligation. Aucune reconfiguration inutile d’un HTTPS fonctionnel n’est demandée.
+
+Le périmètre du merge proposé est la base documentaire bilingue et son outillage de validation locale, pas une livraison opérationnelle certifiée. Les étapes 5–7 de michel-heon/keycloak-marketplace#3 restent ouvertes ; l’issue ne doit pas être fermée automatiquement et l’issue #2 sera traitée séparément.
+
+Limites à conserver dans la proposition de merge :
+
+- image cible non déterminée ; commandes, accès initiaux, santé, TLS et récupération propres à l’image non rejoués ;
+- revue éditoriale par l’assistant, pas essai indépendant d’un nouvel exploitant humain ;
+- aucune nouvelle validation visuelle navigateur dans cette correction ; vérifications visuelles antérieures limitées aux pages et dimensions consignées plus bas ;
+- URL publiques et liens exigés par le listing non validés ; notice de confidentialité et canaux d’assistance encore à confirmer avant publication ;
+- avertissements transitifs Ruby `base64` et `bigdecimal` connus ; pas de certification d’accessibilité ou d’audit de sécurité revendiquée ;
+- aucune activation GitHub Pages, aucun workflow de publication ajouté, aucun déploiement ni merge exécuté par cette préparation.
+
+Vérification distante préalable : le dépôt déclare `has_pages: false` ; l’API Pages répond HTTP 404. Aucun modèle de PR ou workflow trouvé dans la branche locale ni dans l’arbre distant `main` inspecté. Ces constats décrivent l’état observé, pas une garantie contre une modification ultérieure des réglages.
+
+Contrôles rejoués après la correction :
+
+- `make -C docs/keycloak-azure-marketplace-docs check` : réussi ; 22 pages, onze paires EN/FR, 278 liens locaux rendus, dix tableaux, dix cases et six tests de régression.
+- `git -C docs/keycloak-azure-marketplace-docs diff --check` : réussi.
+- Contrôle Python ciblé : présence, dans l’étape 3 EN/FR, du cas HTTPS déjà fonctionnel, des obligations de renouvellement et de l’absence de reconfiguration inutile ; critère de renouvellement présent dans les deux listes, toujours cinq cases par quick-start. Réussi.
+
 ## Corrections de la revue opérateur R1–R3
 
 - **R1 :** accueil et sorties des guides alignés sur Azure → accès VM → santé applicative → HTTPS → administration permanente. Le guide de déploiement suspend explicitement le contrôle applicatif jusqu’à l’accès VM ; le guide d’accès renvoie à ce contrôle sans demander de recommencer l’accès. Après le jalon administratif, aucune sortie ne renvoie à TLS comme tâche suivante. Les noms de fichiers historiques restent stables.
