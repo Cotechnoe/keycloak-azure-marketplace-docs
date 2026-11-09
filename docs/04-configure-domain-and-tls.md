@@ -29,7 +29,7 @@ After an approved configuration change:
 
 1. Open the agreed HTTPS address from an intended client network.
 2. Verify that the client trusts the certificate without an exception and that the hostname is correct.
-3. Verify that Keycloak-generated URLs and application redirects use the intended service address.
+3. Verify that Keycloak-generated URLs use the intended service address. Application redirects are checked later during application integration; an external application is not required for this HTTPS milestone.
 4. Assign an owner to renewal and test the renewal process in an appropriate test environment. Record how expiry and renewal failures will be detected.
 
 **Expected result:** the agreed hostname is reachable over trusted HTTPS and the certificate lifecycle has an owner. Reaching a page while ignoring certificate errors is not a successful TLS check.
@@ -38,4 +38,4 @@ After an approved configuration change:
 
 Separate DNS resolution, network reachability, certificate trust/name errors and incorrect generated URLs. Do not disable hostname checks, expose internal service interfaces or bypass trust verification as a permanent fix. Use [troubleshooting](07-troubleshoot-and-get-support.md).
 
-**Next:** complete [initial administrator setup](03-complete-initial-access.md) if still pending, then [configure Keycloak](05-configure-keycloak.md).
+**Next:** with trusted HTTPS verified, complete [initial administrator setup](03-complete-initial-access.md). If permanent administration is already verified, skip that completed task and continue to [configure Keycloak](05-configure-keycloak.md) when an application owner is ready.

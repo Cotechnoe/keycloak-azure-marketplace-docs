@@ -37,4 +37,4 @@ Stop if the address or certificate is unexpected, the initial credentials are un
 
 Use [support](../SUPPORT.md) for image-specific guidance. Keycloak's [recovery reference](https://www.keycloak.org/server/bootstrap-admin-recovery) includes prerequisites that must be assessed for your deployment before any recovery action.
 
-**Next:** [Configure your domain and trusted HTTPS](04-configure-domain-and-tls.md), or verify its result if already completed.
+**Next:** the permanent-administration milestone is complete only when the checks above succeed. You may stop this setup session here without an external application. When an application owner is ready, continue to [Configure Keycloak for your organization](05-configure-keycloak.md). Before real users, complete [Operate, protect and recover your deployment](06-operate-and-recover.md); administrative access alone is not production readiness.

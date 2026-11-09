@@ -2,20 +2,34 @@
 
 **Statut :** parcours approuvé par le demandeur ; identification de l’image cible explicitement reportée
 
+## Corrections de la revue opérateur R1–R3
+
+- **R1 :** accueil et sorties des guides alignés sur Azure → accès VM → santé applicative → HTTPS → administration permanente. Le guide de déploiement suspend explicitement le contrôle applicatif jusqu’à l’accès VM ; le guide d’accès renvoie à ce contrôle sans demander de recommencer l’accès. Après le jalon administratif, aucune sortie ne renvoie à TLS comme tâche suivante. Les noms de fichiers historiques restent stables.
+- **R2 :** quick-start EN/FR organisé en quatre étapes et quatre critères administratifs, puis une suite applicative distincte en trois étapes et un critère. Aucun responsable applicatif n’est requis pour terminer le premier jalon. Les redirections applicatives sont vérifiées pendant l’intégration, pas comme condition du contrôle HTTPS initial. Ni le jalon administratif ni le test applicatif ne démontrent l’aptitude à la production.
+- **R3 :** points d’entrée Azure documentés : Virtual machines / Overview, groupe de ressources / Deployments / déploiement correspondant, Access control (IAM) / Check access / View my access ou vue PIM, Role assignments. Chaque contrôle décrit quoi relever, le résultat observable et le comportement si la donnée ou l’autorisation manque. Les libellés suivent la documentation anglaise et peuvent varier selon la langue du portail. Les quatre sources Microsoft ajoutées sont liées dans les guides EN/FR.
+
+Validation effectuée :
+
+- `make -C docs/keycloak-azure-marketplace-docs check` : réussi ; build Jekyll, 22 pages, onze paires EN/FR, 278 liens locaux HTML/CSS/fragments, dix tableaux, dix cases et six tests de régression. Avertissements transitifs Ruby `base64` et `bigdecimal` inchangés.
+- Contrôle Python ciblé des sources : ordre du tableau d’accueil, listes numérotées 1–4 puis 1–3 du quick-start, répartition de quatre puis une cases et cibles des sorties des guides 01/02/03 vérifiés dans les deux langues.
+- `curl --silent --show-error --fail --location --max-time 25 --output /dev/null --write-out '%{http_code}' URL` : HTTP 200 pour chacune des quatre nouvelles sources Microsoft (portail VM, historique des déploiements, vérification des accès et liste des attributions).
+
+Ces contrôles portent sur les sources et le site reconstruit. Pas de nouveau test visuel navigateur, de contrôle dans un abonnement Azure, d’exécution sur une VM ni de validation indépendante par un nouvel exploitant humain. Les étapes 5 à 7 ne deviennent donc pas terminées. Aucune publication ou PR.
+
 Cette architecture cible la personne responsable de l’abonnement Azure et de la VM après son instanciation depuis Microsoft Marketplace. Le parcours suppose que le client a terminé l’action de déploiement dans Azure ; il ne présume ni que l’offre est actuellement publiée, ni d’un titre Marketplace, plan, SKU, version d’image, choix réseau ou service Azure déjà activé.
 
 La documentation sera bilingue anglais-français. Les noms de fichiers ci-dessous définissent la structure approuvée ; leur présence dans la branche de travail ne constitue pas une publication. Tout comportement particulier à l’offre doit être vérifié sur l’image Marketplace retenue avant de devenir une instruction.
 
 ## Parcours approuvé
 
-À la demande du lecteur, un quick-start anglais (`QUICKSTART.md`) complète l’accueil : cinq étapes synthétiques jusqu’au premier test de connexion applicative, liens vers les guides détaillés et arrêt explicite devant une procédure propre à l’image non vérifiée. Il ne remplace ni les sept guides ni la préparation à la production. Sa traduction fait partie de l’étape 4.
+À la demande du lecteur, le quick-start bilingue (`QUICKSTART.md`, `QUICKSTART-fr.md`) complète l’accueil : quatre étapes jusqu’au jalon administratif, puis une suite applicative facultative distincte en trois étapes. Il renvoie aux guides détaillés et impose un arrêt devant une procédure propre à l’image non vérifiée. Il ne remplace ni les sept guides ni la préparation à la production.
 
 | Ordre | Question de l’opérateur | Sujet et résultat attendu | Page proposée | Critères couverts |
 |---|---|---|---|---|
 | 1 | Le déploiement Azure est-il terminé et la VM est-elle prête ? | Vérifier les informations de déploiement visibles dans Azure, distinguer état de la ressource et état du service, relever les données de l’instance sans exposer de secrets, reconnaître un échec et savoir quoi collecter. Les indicateurs et chemins propres à l’image restent à vérifier. | `docs/01-verify-deployment.md` | Structure et tâches actionnables ; responsabilités distinctes ; vérification des faits et dépannages |
 | 2 | Comment administrer la VM sans exposer inutilement l’accès ? | Expliquer les rôles et accès Azure, les principes d’accès réseau restreint et la vérification des règles effectives. Ne recommander ni port, ni source autorisée spécifique au produit avant confirmation du plan et de l’image publiés. | `docs/02-secure-azure-access.md` | Responsabilités ; sources Microsoft ; aucune valeur non vérifiée |
-| 3 | Comment effectuer le premier accès Keycloak et retirer l’accès temporaire ? | Présenter les identifiants initiaux, le changement vers un accès administrateur durable, la suppression de l’accès temporaire et le traitement sûr des secrets, uniquement selon le parcours confirmé sur l’image cible. | `docs/03-complete-initial-access.md` | Procédure vérifiée ; sécurité ; dépannage |
-| 4 | Comment donner une adresse stable et activer TLS de confiance ? | Guider la préparation DNS, la configuration du nom d’hôte, le certificat, les prérequis réseau et la vérification HTTPS. Séparer le comportement intégré à l’image des dépendances DNS/autorité de certification gérées par le client. | `docs/04-configure-domain-and-tls.md` | Mise en service ; responsabilités ; sources officielles |
+| 3 | Comment donner une adresse stable et activer TLS de confiance ? | Guider la préparation DNS, la configuration du nom d’hôte, le certificat, les prérequis réseau et la vérification HTTPS. Séparer le comportement intégré à l’image des dépendances DNS/autorité de certification gérées par le client. | `docs/04-configure-domain-and-tls.md` | Mise en service ; responsabilités ; sources officielles |
+| 4 | Comment effectuer le premier accès Keycloak et retirer l’accès temporaire ? | Présenter les identifiants initiaux, le changement vers un accès administrateur durable, la suppression de l’accès temporaire et le traitement sûr des secrets, uniquement selon le parcours confirmé sur l’image cible. | `docs/03-complete-initial-access.md` | Procédure vérifiée ; sécurité ; dépannage |
 | 5 | Comment préparer Keycloak pour l’organisation ? | Expliquer les concepts et décisions de configuration nécessaires (realm, comptes ou fédération selon le besoin, clients et URI de redirection), ainsi que le test d’une intégration. Dire explicitement que les applications, annuaires et intégrations ne sont pas inclus dans la VM, sauf preuve commerciale/technique contraire. | `docs/05-configure-keycloak.md` | Limites de l’offre ; tâches opérateur ; documentation officielle Keycloak |
 | 6 | Comment exploiter et récupérer l’instance ? | Regrouper les responsabilités courantes : sauvegarde et restauration testée, mises à jour OS et application, surveillance, disponibilité et dépendances, coûts. Distinguer les conseils Azure génériques des options nécessitant une configuration ou un coût client ; ne pas assimiler mise à jour OS et mise à niveau Keycloak/image. | `docs/06-operate-and-recover.md` | Exploitation Azure ; sources Microsoft ; responsabilités et limites |
 | 7 | Que faire quand un contrôle échoue, et à qui s’adresser ? | Organiser les symptômes par étape, indiquer les vérifications non destructives, les éléments expurgés à joindre et l’escalade appropriée. Les symptômes, commandes et journaux propres à l’image seront testés avant publication. | `docs/07-troubleshoot-and-get-support.md` | Dépannage ; support ; confidentialité et caviardage |
@@ -26,7 +40,7 @@ L’accueil (`README.md` et `README-fr.md`) devient le point d’entrée : il id
 ## Principes de navigation et de rédaction
 
 - Organiser les pages par tâche et dans l’ordre réel d’usage, avec titres à l’impératif.
-- Si HTTPS de confiance n’est pas encore établi, accomplir les prérequis DNS/TLS de l’étape 4 avant toute saisie d’identifiants à l’étape 3 ; la numérotation n’autorise pas à contourner une alerte de certificat.
+- Accomplir HTTPS de confiance avant le premier accès Keycloak. L’ordre d’exécution ne dépend pas des numéros historiques des fichiers, conservés pour la stabilité des liens. Le contrôle de préparation applicative du guide 01 est suspendu en l’absence d’accès VM et explicitement repris après le guide 02, avant TLS ; ce n’est pas une demande de recommencer les contrôles Azure.
 - Dans chaque procédure, présenter : objectif, prérequis, étapes, résultat attendu, dépannage/escalade et références applicables.
 - Indiquer qui agit : client dans Azure, opérateur de la VM/Keycloak, éditeur ou Microsoft. Ne pas promettre de SLA ou de responsabilité contractuelle non vérifiés.
 - Séparer les instructions Azure applicables en général des comportements réellement fournis ou préconfigurés par l’offre.

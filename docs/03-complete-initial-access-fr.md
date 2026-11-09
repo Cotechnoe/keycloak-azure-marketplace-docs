@@ -38,4 +38,4 @@ Arrêtez-vous si l’adresse ou le certificat est inattendu, si les identifiants
 
 Contactez l’[assistance](../SUPPORT-fr.md) pour les précisions propres à l’image. La [référence Keycloak sur la récupération](https://www.keycloak.org/server/bootstrap-admin-recovery) contient des prérequis à évaluer pour votre déploiement avant toute récupération.
 
-**Suite :** [Configurer votre domaine et HTTPS de confiance](04-configure-domain-and-tls-fr.md), ou vérifier le résultat si cette tâche est déjà accomplie.
+**Suite :** le jalon d’administration permanente est terminé uniquement si les contrôles ci-dessus réussissent. Vous pouvez arrêter cette session de mise en service ici sans application externe. Lorsqu’un responsable applicatif est prêt, poursuivez avec [Configurer Keycloak pour votre organisation](05-configure-keycloak-fr.md). Avant de vrais utilisateurs, accomplissez [Exploiter, protéger et restaurer votre déploiement](06-operate-and-recover-fr.md) ; l’accès administratif seul ne démontre pas une aptitude à la production.

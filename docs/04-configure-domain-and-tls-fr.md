@@ -30,7 +30,7 @@ Après une modification de configuration approuvée :
 
 1. Ouvrez l’adresse HTTPS convenue depuis un réseau client prévu.
 2. Vérifiez que le client approuve le certificat sans exception et que le nom d’hôte est correct.
-3. Vérifiez que les URL générées par Keycloak et les redirections applicatives utilisent l’adresse de service prévue.
+3. Vérifiez que les URL générées par Keycloak utilisent l’adresse de service prévue. Les redirections applicatives sont contrôlées plus tard lors de l’intégration applicative ; aucune application externe n’est nécessaire pour ce jalon HTTPS.
 4. Attribuez la responsabilité du renouvellement et testez le processus dans un environnement de test approprié. Consignez comment l’expiration et les échecs de renouvellement seront détectés.
 
 **Résultat attendu :** le nom d’hôte convenu est accessible par HTTPS de confiance et le cycle de vie du certificat a un responsable. Accéder à une page en ignorant les erreurs de certificat n’est pas un contrôle TLS réussi.
@@ -39,4 +39,4 @@ Après une modification de configuration approuvée :
 
 Distinguez la résolution DNS, l’accessibilité réseau, les erreurs de confiance ou de nom du certificat et les URL générées incorrectes. Ne désactivez pas les contrôles de nom d’hôte, n’exposez pas les interfaces internes et ne contournez pas la vérification de confiance comme correction permanente. Consultez le [dépannage](07-troubleshoot-and-get-support-fr.md).
 
-**Suite :** accomplir la [configuration de l’administrateur initial](03-complete-initial-access-fr.md) si elle reste à faire, puis [configurer Keycloak](05-configure-keycloak-fr.md).
+**Suite :** après vérification de HTTPS de confiance, accomplissez la [configuration de l’administrateur initial](03-complete-initial-access-fr.md). Si l’administration permanente est déjà vérifiée, passez cette tâche accomplie et poursuivez avec [configurer Keycloak](05-configure-keycloak-fr.md) lorsqu’un responsable applicatif est prêt.

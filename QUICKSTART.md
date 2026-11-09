@@ -1,7 +1,7 @@
 ---
-title: "Quick start: reach your first application sign-in"
+title: "Quick start: establish permanent administration"
 ---
-# Quick start: reach your first application sign-in
+# Quick start: establish permanent administration
 
 English · [Français](QUICKSTART-fr.md)
 
@@ -11,27 +11,37 @@ English · [Français](QUICKSTART-fr.md)
 
 ## Before you start
 
-Have your Azure subscription and resource group, permission to inspect the deployed VM, an approved management connection, and access to the DNS and certificate owners. For the final check, involve an application owner and use test accounts without production data.
+Have your Azure subscription and resource group, permission to inspect the deployed VM, an approved way to obtain management access, and access to the DNS and certificate owners. You do not need an external application to complete the administrative milestone. Image-specific instructions must still be verified before execution.
 
-## Follow these five steps
+## Reach the administrative milestone
 
-1. **Find your VM and check readiness.** In the Azure portal, locate the intended VM and review its provisioning and power states. Check application readiness separately using the procedure verified for your image; a running VM alone does not establish that Keycloak is ready. See [Verify your deployment](docs/01-verify-deployment.md).
-2. **Confirm restricted administration access.** Verify that an authorized operator can manage the VM through your approved route. Review permissions and network restrictions; do not open management access to all sources to get started. See [Secure your Azure administration access](docs/02-secure-azure-access.md).
+1. **Find your VM and check its Azure state.** In the Azure portal, locate the intended VM and record its deployment and power states. Leave application readiness marked as not verified until management access is available. See [Verify your deployment](docs/01-verify-deployment.md).
+2. **Confirm restricted VM access, then check application readiness.** Follow [Secure your Azure administration access](docs/02-secure-azure-access.md), then complete the application-readiness check in the deployment guide before continuing. Use only a procedure verified for your image; stop if it is unavailable. A running VM alone does not establish that Keycloak is ready. Do not open management access to all sources.
 3. **Verify the service address and trusted HTTPS.** Use the address confirmed by your deployment owner. Check that the intended client can reach it without a certificate warning. If not, complete [Configure your domain and trusted HTTPS](docs/04-configure-domain-and-tls.md) before entering credentials.
 4. **Replace temporary administrator access.** Obtain initial credentials only through the mechanism confirmed for your image. Establish and test a permanent administrator in a separate session before removing temporary access and retiring its credential material. See [Complete your initial Keycloak access](docs/03-complete-initial-access.md).
-5. **Test one application sign-in.** With the application owner, configure a test realm, user and client appropriate to the application. Start sign-in from that application, verify the resulting session, and check that an unauthorized user is denied the intended access. See [Configure Keycloak for your organization](docs/05-configure-keycloak.md).
 
 **Stop at an unverified image-specific procedure.** Do not guess a console URL, credential location, command or configuration value. Ask for the missing instructions through [support](SUPPORT.md) before continuing. Never bypass a certificate warning or remove your only working administrator.
 
-## Check your result
+## Check the administrative result
 
 - [ ] Azure resource state and application readiness have been checked separately.
 - [ ] Authorized operators have a verified, restricted management connection.
 - [ ] The agreed service address uses HTTPS trusted by the intended client.
 - [ ] Permanent administration works and temporary access no longer works.
+
+You may finish this administrative milestone here without an external application. It is **not production readiness** and does not demonstrate application integration.
+
+## Continue with an application when ready
+
+This is a separate, optional continuation of the quick start, not a requirement for completing administrative access. Involve an application owner and use test accounts without production data. Before real users can sign in to an application, its integration must be configured and tested.
+
+1. With the application owner, configure a test realm, user and client appropriate to the application. See [Configure Keycloak for your organization](docs/05-configure-keycloak.md).
+2. Start sign-in from that application and verify the resulting session.
+3. Check that an unauthorized user is denied the intended access.
+
 - [ ] The test application accepts the intended user and rejects unauthorized access.
 
-This result demonstrates an initial test, **not production readiness**. Deploying the VM does not automatically integrate your applications.
+Deploying the VM does not automatically integrate your applications. This application test is also **not production readiness**.
 
 ## Before you connect real users
 

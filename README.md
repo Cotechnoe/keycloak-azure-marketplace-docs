@@ -16,7 +16,7 @@ You do not need the publisher's build tools to use these guides. You do need per
 
 ## Start with the quick start
 
-Use the [quick start](QUICKSTART.md) for a five-step route from deployment checks to a first test application sign-in. It links to the detailed procedures and explains when to stop if an image-specific instruction is not yet verified.
+Use the [quick start](QUICKSTART.md) to reach a first milestone: verified permanent administration. A separate, optional continuation covers a first application sign-in when an application owner is ready. Both routes stop at unverified image-specific instructions.
 
 ## Follow your post-deployment checklist
 
@@ -24,13 +24,15 @@ Use the [quick start](QUICKSTART.md) for a five-step route from deployment check
 |---|---|---|
 | 1 | [Verify your deployment](docs/01-verify-deployment.md) | You can identify your VM and distinguish Azure provisioning from application readiness. |
 | 2 | [Secure your Azure administration access](docs/02-secure-azure-access.md) | Authorized operators have a restricted, tested management connection. |
-| 3 | [Complete your initial Keycloak access](docs/03-complete-initial-access.md) | A permanent administrator works and temporary access has been retired. |
-| 4 | [Configure your domain and trusted HTTPS](docs/04-configure-domain-and-tls.md) | Your intended clients can reach the agreed hostname without a certificate warning. |
+| 3 | [Configure your domain and trusted HTTPS](docs/04-configure-domain-and-tls.md) | Your intended clients can reach the agreed hostname without a certificate warning. |
+| 4 | [Complete your initial Keycloak access](docs/03-complete-initial-access.md) | A permanent administrator works and temporary access has been retired. |
 | 5 | [Configure Keycloak for your organization](docs/05-configure-keycloak.md) | A test application and user complete the intended sign-in flow. |
 | 6 | [Operate, protect and recover your deployment](docs/06-operate-and-recover.md) | You have owners, monitoring, maintenance and a tested recovery plan. |
 | 7 | [Troubleshoot and request help](docs/07-troubleshoot-and-get-support.md) | You can identify the failing layer and prepare a safe support request. |
 
 Use the troubleshooting guide at any step. **If your administration URL does not already have trusted HTTPS, complete the domain and TLS prerequisites before entering Keycloak credentials.** Do not bypass certificate warnings to follow the numbering.
+
+Follow this execution order: Azure resource checks → approved VM access → application-readiness check → trusted HTTPS → permanent administrator. The deployment guide explains when to pause its health check until VM access is available. The file names are stable identifiers, not the execution order. Application integration and production preparation follow as separate tasks.
 
 ## Understand what you manage
 

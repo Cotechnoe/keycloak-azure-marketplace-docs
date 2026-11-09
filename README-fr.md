@@ -17,7 +17,7 @@ Les outils de construction de l’éditeur ne sont pas nécessaires pour suivre 
 
 ## Commencer par le démarrage rapide
 
-Suivez le [démarrage rapide](QUICKSTART-fr.md) en cinq étapes, des contrôles du déploiement au premier test de connexion à une application. Il renvoie aux procédures détaillées et précise quand vous arrêter si une instruction propre à l’image n’est pas encore vérifiée.
+Suivez le [démarrage rapide](QUICKSTART-fr.md) jusqu’au premier jalon : une administration permanente vérifiée. Une suite facultative distincte couvre la première connexion applicative lorsqu’un responsable applicatif est prêt. Les deux parcours s’arrêtent devant une instruction propre à l’image non vérifiée.
 
 ## Suivre votre liste de contrôle après déploiement
 
@@ -25,13 +25,15 @@ Suivez le [démarrage rapide](QUICKSTART-fr.md) en cinq étapes, des contrôles 
 |---|---|---|
 | 1 | [Vérifier votre déploiement](docs/01-verify-deployment-fr.md) | Vous identifiez votre VM et distinguez le provisionnement Azure de l’état de préparation de l’application. |
 | 2 | [Sécuriser votre accès d’administration Azure](docs/02-secure-azure-access-fr.md) | Les exploitants autorisés disposent d’un accès d’administration restreint et testé. |
-| 3 | [Finaliser votre premier accès à Keycloak](docs/03-complete-initial-access-fr.md) | Un administrateur permanent fonctionne et l’accès temporaire a été retiré. |
-| 4 | [Configurer votre domaine et HTTPS de confiance](docs/04-configure-domain-and-tls-fr.md) | Les clients prévus atteignent le nom d’hôte convenu sans avertissement de certificat. |
+| 3 | [Configurer votre domaine et HTTPS de confiance](docs/04-configure-domain-and-tls-fr.md) | Les clients prévus atteignent le nom d’hôte convenu sans avertissement de certificat. |
+| 4 | [Finaliser votre premier accès à Keycloak](docs/03-complete-initial-access-fr.md) | Un administrateur permanent fonctionne et l’accès temporaire a été retiré. |
 | 5 | [Configurer Keycloak pour votre organisation](docs/05-configure-keycloak-fr.md) | Une application et un utilisateur de test accomplissent le parcours de connexion prévu. |
 | 6 | [Exploiter, protéger et restaurer votre déploiement](docs/06-operate-and-recover-fr.md) | Les responsables, la surveillance, la maintenance et un plan de récupération testé sont en place. |
 | 7 | [Diagnostiquer un problème et demander de l’aide](docs/07-troubleshoot-and-get-support-fr.md) | Vous identifiez la couche en échec et préparez une demande d’assistance sans données sensibles. |
 
 Utilisez le guide de dépannage à n’importe quelle étape. **Si votre URL d’administration ne dispose pas déjà de HTTPS de confiance, accomplissez les prérequis domaine et TLS avant de saisir des identifiants Keycloak.** Ne contournez pas les avertissements de certificat pour respecter la numérotation.
+
+Suivez cet ordre d’exécution : contrôles de la ressource Azure → accès VM approuvé → contrôle de préparation de l’application → HTTPS de confiance → administrateur permanent. Le guide de déploiement indique quand suspendre son contrôle de santé jusqu’à l’obtention de l’accès VM. Les noms de fichiers sont des identifiants stables, pas l’ordre d’exécution. L’intégration applicative et la préparation à la production sont des tâches distinctes à poursuivre ensuite.
 
 ## Comprendre ce que vous gérez
 

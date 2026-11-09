@@ -1,8 +1,8 @@
 ---
-title: "Démarrage rapide : réussir votre première connexion applicative"
+title: "Démarrage rapide : établir une administration permanente"
 lang: fr
 ---
-# Démarrage rapide : réussir votre première connexion applicative
+# Démarrage rapide : établir une administration permanente
 
 [English](QUICKSTART.md) · Français
 
@@ -12,27 +12,37 @@ lang: fr
 
 ## Avant de commencer
 
-Munissez-vous de votre abonnement Azure et de votre groupe de ressources, des autorisations pour inspecter la VM déployée, d’un accès d’administration approuvé et des coordonnées des responsables DNS et certificats. Pour le contrôle final, associez un responsable applicatif et utilisez des comptes de test sans données de production.
+Munissez-vous de votre abonnement Azure et de votre groupe de ressources, des autorisations pour inspecter la VM déployée, d’un moyen approuvé d’obtenir l’accès d’administration et des coordonnées des responsables DNS et certificats. Aucune application externe n’est nécessaire pour terminer le jalon administratif. Les instructions propres à l’image doivent toujours être vérifiées avant exécution.
 
-## Suivre ces cinq étapes
+## Atteindre le jalon administratif
 
-1. **Retrouvez votre VM et vérifiez son état de préparation.** Dans le portail Azure, repérez la VM prévue et consultez ses états de provisionnement et d’alimentation. Vérifiez séparément l’état de préparation de l’application avec la procédure validée pour votre image ; une VM en cours d’exécution ne prouve pas à elle seule que Keycloak est prêt. Consultez [Vérifier votre déploiement](docs/01-verify-deployment-fr.md).
-2. **Confirmez un accès d’administration restreint.** Vérifiez qu’un exploitant autorisé peut gérer la VM par le moyen approuvé. Examinez les autorisations et restrictions réseau ; n’ouvrez pas l’administration à toutes les sources pour démarrer. Consultez [Sécuriser votre accès d’administration Azure](docs/02-secure-azure-access-fr.md).
+1. **Retrouvez votre VM et vérifiez son état Azure.** Dans le portail Azure, repérez la VM prévue et consignez ses états de déploiement et d’alimentation. Laissez la préparation de l’application comme non vérifiée tant que l’accès d’administration n’est pas disponible. Consultez [Vérifier votre déploiement](docs/01-verify-deployment-fr.md).
+2. **Confirmez un accès VM restreint, puis vérifiez la préparation de l’application.** Suivez [Sécuriser votre accès d’administration Azure](docs/02-secure-azure-access-fr.md), puis terminez le contrôle de préparation applicative du guide de déploiement avant de poursuivre. Utilisez uniquement une procédure vérifiée pour votre image ; arrêtez-vous si elle est indisponible. Une VM en cours d’exécution ne prouve pas à elle seule que Keycloak est prêt. N’ouvrez pas l’administration à toutes les sources.
 3. **Vérifiez l’adresse du service et HTTPS de confiance.** Utilisez l’adresse confirmée par le responsable du déploiement. Vérifiez que le client prévu l’atteint sans avertissement de certificat. Sinon, accomplissez [Configurer votre domaine et HTTPS de confiance](docs/04-configure-domain-and-tls-fr.md) avant de saisir des identifiants.
 4. **Remplacez l’accès administrateur temporaire.** Obtenez les identifiants initiaux uniquement par le mécanisme confirmé pour votre image. Établissez et testez un administrateur permanent dans une session distincte avant de supprimer l’accès temporaire et de retirer les éléments d’authentification associés. Consultez [Finaliser votre premier accès à Keycloak](docs/03-complete-initial-access-fr.md).
-5. **Testez une connexion applicative.** Avec le responsable applicatif, configurez un realm, un utilisateur et un client de test adaptés à l’application. Lancez la connexion depuis cette application, vérifiez la session obtenue et confirmez qu’un utilisateur non autorisé se voit refuser l’accès prévu. Consultez [Configurer Keycloak pour votre organisation](docs/05-configure-keycloak-fr.md).
 
 **Arrêtez-vous devant une procédure propre à l’image non vérifiée.** Ne devinez ni URL de console, ni emplacement d’identifiants, ni commande, ni valeur de configuration. Demandez les instructions manquantes à l’[assistance](SUPPORT-fr.md) avant de poursuivre. Ne contournez jamais un avertissement de certificat et ne supprimez pas votre seul administrateur fonctionnel.
 
-## Vérifier votre résultat
+## Vérifier le résultat administratif
 
 - [ ] L’état de la ressource Azure et l’état de préparation de l’application ont été vérifiés séparément.
 - [ ] Les exploitants autorisés disposent d’un accès d’administration restreint et vérifié.
 - [ ] L’adresse de service convenue utilise HTTPS avec un certificat approuvé par le client prévu.
 - [ ] L’administration permanente fonctionne et l’accès temporaire ne fonctionne plus.
+
+Vous pouvez terminer ce jalon administratif ici sans application externe. Il ne démontre **ni une aptitude à la production**, ni une intégration applicative.
+
+## Poursuivre avec une application lorsque vous êtes prêt
+
+Il s’agit d’une suite facultative distincte du démarrage rapide, pas d’une condition pour terminer l’accès administratif. Associez un responsable applicatif et utilisez des comptes de test sans données de production. Avant que de vrais utilisateurs se connectent à une application, son intégration doit être configurée et testée.
+
+1. Avec le responsable applicatif, configurez un realm, un utilisateur et un client de test adaptés à l’application. Consultez [Configurer Keycloak pour votre organisation](docs/05-configure-keycloak-fr.md).
+2. Lancez la connexion depuis cette application et vérifiez la session obtenue.
+3. Confirmez qu’un utilisateur non autorisé se voit refuser l’accès prévu.
+
 - [ ] L’application de test accepte l’utilisateur prévu et refuse les accès non autorisés.
 
-Ce résultat démontre un test initial, **pas une aptitude à la production**. Déployer la VM n’intègre pas automatiquement vos applications.
+Déployer la VM n’intègre pas automatiquement vos applications. Ce test applicatif ne démontre **pas non plus une aptitude à la production**.
 
 ## Avant de connecter de vrais utilisateurs
 

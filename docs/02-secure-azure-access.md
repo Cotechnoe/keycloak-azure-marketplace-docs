@@ -15,12 +15,16 @@ Identify your VM using [Verify your deployment](01-verify-deployment.md). Arrang
 
 ## Review who can administer the deployment
 
-1. In the Azure portal, review role assignments affecting the VM and its related resources with your Azure administrator.
+Portal labels below follow Microsoft's English documentation; localized labels can differ. These checks are read-only and do not grant access.
+
+1. In the Azure portal, open the VM and select **Access control (IAM)** → **Check access**. Use **View my access** where offered; with PIM integration, inspect assignments directly on **Check access**. Record assignments at this resource and inherited from parent scopes. Follow Microsoft's [check-access procedure](https://learn.microsoft.com/en-us/azure/role-based-access-control/check-access).
 2. Grant operators only the actions and scope their duties require. Do not grant subscription-wide ownership simply to solve a connection problem. Microsoft's [Azure RBAC guidance](https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices) explains least-privilege assignments.
 3. Identify separately the people allowed to sign in to the guest operating system and those allowed to administer Keycloak. Azure resource permissions are not a substitute for checking either access path.
 4. Record the authorized operators and the person responsible for removing access when duties change.
 
-**Expected result:** you can explain who manages Azure resources, who can enter the VM, and who will administer Keycloak.
+To review a particular operator, use **Check access** → **Check access**, select **User, group, or service principal**, find the identity and open its assignments. For a scope-wide review, use **Access control (IAM)** → **Role assignments** on the VM, then repeat at the resource group or other relevant resource with your Azure administrator. Microsoft's [role-assignment listing procedure](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-list-portal) describes the required read permission. These views do not list assignments at child scopes; eligible assignments are not necessarily active.
+
+**Expected result:** you have recorded each reviewed identity, role, assignment scope and whether access is inherited or requires activation. You can explain who manages Azure resources, who can enter the VM, and who will administer Keycloak. If the view is unavailable, record the check as blocked and ask an authorized administrator; do not grant yourself a broader role to complete it.
 
 ## Review your management connection
 
@@ -38,4 +42,4 @@ Identify your VM using [Verify your deployment](01-verify-deployment.md). Arrang
 
 Distinguish Azure permission denial, network timeout and guest authentication failure. Preserve the error type without passwords or private keys. Ask the Azure administrator to inspect effective access and network rules rather than disabling controls. See [troubleshooting](07-troubleshoot-and-get-support.md).
 
-**Next:** [Complete your initial Keycloak access](03-complete-initial-access.md).
+**Next:** return to the application-readiness section of [Verify your deployment](01-verify-deployment.md). Once that check succeeds, continue to [Configure your domain and trusted HTTPS](04-configure-domain-and-tls.md), then permanent administration. Do not repeat access setup if it is already verified.
