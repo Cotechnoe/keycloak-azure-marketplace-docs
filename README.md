@@ -1,85 +1,61 @@
-# Cotechnoe Keycloak IAM for Azure
+---
+title: Operate your Keycloak VM after deployment
+permalink: /
+---
+# Operate your Keycloak VM after deployment
 
-> **Under construction:** Cotechnoe is actively developing this solution and its documentation.
-> The Azure Marketplace offer is not yet publicly available. Features and instructions may change
-> before release; the content below describes the solution being prepared.
+English · [Français](README-fr.md)
 
-Deploy and operate a self-managed Keycloak™ identity and access management server using the Cotechnoe
-virtual machine image for Azure Marketplace. This repository contains customer-facing documentation;
-it is not the Keycloak source code repository.
+> **Pre-release draft — not ready for production use.** The application has not been released on Microsoft Marketplace. Deployment work is in progress. The target image will be confirmed later. Image-specific instructions have not been tested for this documentation; ⚠️ to be validated.
 
-## An identity layer for open ecosystems
+**Draft review date:** 2026-11-09.
 
-Use Keycloak to centralize sign-in for compatible web applications and APIs. It can serve as the identity
-layer for open-source knowledge bases, repositories, semantic data platforms and collaboration tools,
-including [other solutions offered by Cotechnoe](https://www.cotechnoe.com/marketplace/).
-Those solutions are deployed separately and are not included in this image. Application integrations
-require configuration; they are not automatically provided by deploying the VM.
+This documentation is for the Azure administrator or operator responsible for a VM deployed from the Cotechnoe offer. Start here after deploying your VM. It is not a sign-in guide for people using your organization's applications.
 
-## What the image provides
+You do not need the publisher's build tools to use these guides. You do need permission to inspect your Azure deployment and an approved way to administer the VM.
 
-- Keycloak with OpenJDK, a local PostgreSQL database and an Nginx HTTPS reverse proxy.
-- Single sign-on using OpenID Connect, OAuth 2.0 and SAML 2.0.
-- Identity brokering and user federation with LDAP or Active Directory.
-- Instance-specific initial administrator and database credentials, with no shared credentials embedded
-  in the image.
-- An optional data disk for database storage.
+## Start with the quick start
 
-For Keycloak product capabilities and configuration, see the
-[official Keycloak documentation](https://www.keycloak.org/documentation).
+Use the [quick start](QUICKSTART.md) to reach a first milestone: verified permanent administration. A separate, optional continuation covers a first application sign-in when an application owner is ready. Both routes stop at unverified image-specific instructions.
 
-## Get started after deployment
+## Follow your post-deployment checklist
 
-1. Connect to the VM over SSH using the Azure administrator account configured during deployment.
-2. Retrieve the initial Keycloak administrator credentials:
+| Step | Task | You are ready to continue when |
+|---|---|---|
+| 1 | [Verify your deployment](docs/01-verify-deployment.md) | You can identify your VM and distinguish Azure provisioning from application readiness. |
+| 2 | [Secure your Azure administration access](docs/02-secure-azure-access.md) | Authorized operators have a restricted, tested management connection. |
+| 3 | [Configure your domain and trusted HTTPS](docs/04-configure-domain-and-tls.md) | Your intended clients can reach the agreed hostname without a certificate warning. |
+| 4 | [Complete your initial Keycloak access](docs/03-complete-initial-access.md) | A permanent administrator works and temporary access has been retired. |
+| 5 | [Configure Keycloak for your organization](docs/05-configure-keycloak.md) | A test application and user complete the intended sign-in flow. |
+| 6 | [Operate, protect and recover your deployment](docs/06-operate-and-recover.md) | You have owners, monitoring, maintenance and a tested recovery plan. |
+| 7 | [Troubleshoot and request help](docs/07-troubleshoot-and-get-support.md) | You can identify the failing layer and prepare a safe support request. |
 
-   ```bash
-   sudo cat /root/keycloak-initial-admin.txt
-   ```
+Use the troubleshooting guide at any step. **If your administration URL does not already have trusted HTTPS, complete the domain and TLS prerequisites before entering Keycloak credentials.** Do not bypass certificate warnings to follow the numbering.
 
-3. Open the console URL recorded in that file.
-4. Sign in, create a permanent administrator and delete the temporary administrator account.
-5. Configure a DNS name and a trusted HTTPS certificate before connecting users and applications.
+Follow this execution order: Azure resource checks → approved VM access → application-readiness check → trusted HTTPS → permanent administrator. The deployment guide explains when to pause its health check until VM access is available. The file names are stable identifiers, not the execution order. Application integration and production preparation follow as separate tasks.
 
-Do not share the credentials file or include its contents in support requests.
+## Understand what you manage
 
-## Digital sovereignty and data control
+An Azure VM is an infrastructure-as-a-service resource. Microsoft's [shared responsibility guidance](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility) distinguishes the Azure platform from the operating system, applications, identities and data that you manage.
 
-Keycloak and PostgreSQL run on the VM in your Azure subscription. You manage the service, administrators,
-network exposure, connected applications, backups and data retention. Open identity protocols let you
-connect compatible applications without requiring a Cotechnoe-hosted identity service.
+| Area | Your operational action |
+|---|---|
+| Azure resources and access | Review who can administer the resources and which network connections are allowed. |
+| VM and application | Verify readiness, manage administrator access and plan maintenance. |
+| Your organization's users and applications | Configure integrations and permissions. Deploying a VM does not establish a working application sign-in flow. |
+| Data and continuity | Protect credentials, arrange backups, test recovery and define acceptable downtime. |
+| Azure services you choose | Check compatibility, permissions, configuration and charges before enabling them. |
 
-These choices support control over your identity infrastructure, but the image alone does not guarantee
-data residency, regulatory compliance or digital sovereignty. Outcomes depend on your Azure configuration,
-operating practices and connected services.
+These are operational responsibilities, not a replacement for your agreements with Microsoft or Cotechnoe. Do not assume the image includes managed backups, Azure Monitor guest collection, update management, high availability or a support SLA.
 
-## Operate your deployment
+## Know the limits of this draft
 
-This is a single-node deployment. High availability, clustering, backups, updates and recovery planning
-are your responsibility. An optional data disk separates database storage from the operating-system disk;
-it is not a substitute for backups.
+- No image version, operating-system version, commercial display name, Marketplace plan, price or supported VM size is established by these guides.
+- Keycloak's [official administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html) describes upstream capabilities. A capability is not necessarily configured or verified in this offer.
+- Applications, directories and external identity providers must be assessed and integrated separately. This documentation does not promise a bundled integration.
+- Sections marked **⚠️ to be validated** are not instructions to execute on a production VM. Stop at that point and [request clarification](SUPPORT.md).
+- English is the reference language; a French translation is available. Rendered-site validation and execution on the selected image remain separate delivery steps.
 
-Deployment, HTTPS configuration, backup, upgrade and troubleshooting guides will be added to this repository.
+## Protect information when requesting help
 
-## Privacy
-
-Read the [Privacy Notice](./PRIVACY.md) for information about data handled by the VM, Azure, connected services
-and support requests.
-
-**Documentation status:** the privacy notice is a draft. The publisher's legal entity, privacy contact and
-support-data retention process must be confirmed before using it as the Marketplace privacy policy.
-
-## Support and documentation feedback
-
-For questions about the Cotechnoe image or corrections to this documentation,
-[open an issue](https://github.com/Cotechnoe/keycloak-azure-marketplace-docs/issues).
-Issues are public: do not include passwords, tokens, private keys or personal data. Redact diagnostic logs
-before sharing them.
-
-Cotechnoe's support scope covers the packaging and deployment of this image. For Keycloak product
-documentation and community resources, use the [Keycloak website](https://www.keycloak.org/documentation).
-
-## Trademarks
-
-Keycloak is a trademark of The Linux Foundation. Cotechnoe is not affiliated with, sponsored by or endorsed
-by The Linux Foundation, the Cloud Native Computing Foundation or the Keycloak project.
+Read the [support guidance](SUPPORT.md) and [privacy notice](PRIVACY.md). Never post passwords, private keys, tokens, cookies, administrator credential files or personal data in public issues.

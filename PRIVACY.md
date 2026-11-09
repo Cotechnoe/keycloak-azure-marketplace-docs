@@ -1,58 +1,38 @@
-# Privacy notice — Cotechnoe Keycloak™ IAM for Azure
+---
+title: Review privacy considerations for your deployment
+---
+# Review privacy considerations for your deployment
 
-**Last updated:** 2026-11-07
+English · [Français](PRIVACY-fr.md)
 
-This notice describes privacy aspects of the Cotechnoe Keycloak virtual machine image offered through Azure
-Marketplace. It does not replace Microsoft's privacy terms for Azure or the privacy notices of services that you
-connect to the VM.
+[Documentation home](README.md)
 
-## Data handled by the VM
+> **Pre-release draft — not a finalized Marketplace privacy policy.** The application has not been released on Microsoft Marketplace. The target image and its data flows are ⚠️ to be validated. This page must not be used as evidence of a legal or technical compliance review.
 
-Keycloak and its local PostgreSQL database run on the virtual machine deployed in your Azure subscription. They
-process the identity, account, authentication, configuration and audit data that you or your users provide or
-generate while using Keycloak. You administer this data and are responsible for configuring access, retention,
-backups and any legal notices required for your users.
+## Review the data your identity service handles
 
-The image generates instance-specific administrator and database credentials during first boot. It does not
-include shared credentials. The image is designed not to send Keycloak identity data, application data or usage
-telemetry to Cotechnoe during normal operation. Cotechnoe does not receive access to your VM or its data by
-default.
+Keycloak's [administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html) describes users, credentials, attributes, roles and sessions. Review which information your own configuration collects and exposes to applications.
 
-## Azure and connected services
+Identify who can administer the service, which systems receive identity information, how logs and backups are protected, and how your organization handles access, retention and deletion. The deployment does not by itself establish regulatory compliance or data residency.
 
-Microsoft operates the Azure infrastructure and may process account, subscription, billing, diagnostic and
-service data under the terms and privacy notices applicable to your Azure services. Review the
-[Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) and the terms for your Azure
-subscription.
+**⚠️ To be validated for the target image:** actual stored data and log locations, default logging, credential handling, outbound connections, telemetry and any publisher access. This draft does not assert that a review of those behaviors has been completed.
 
-Your VM may communicate with Azure platform endpoints and with services you configure. For example, requesting
-an optional Let's Encrypt certificate contacts the certificate authority. Identity providers, applications,
-directory services, DNS providers, backup destinations and other integrations you connect may receive data
-according to their own configuration and privacy terms. These services are not operated by Cotechnoe as part of
-this image.
+## Review Azure and connected-service terms
 
-## Information you send to Cotechnoe
+Microsoft's [shared responsibility guidance](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility) describes the distinction between the platform and the systems and data you operate. Review the [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement) and the terms applicable to your Azure subscription.
 
-If you contact Cotechnoe for support, Cotechnoe will use the contact details and diagnostic information you
-choose to provide to respond to and manage your request. Do not send passwords, private keys, access tokens or
-unnecessary personal data. Cotechnoe does not have access to VM logs or customer data unless you choose to share
-them or separately grant access.
+For each application, directory, identity provider, certificate authority, DNS provider, monitoring service or backup destination you configure, review its data flows and privacy terms separately. Do not assume those services are part of the image or subject to a single privacy notice.
 
-## Your responsibilities and choices
+## Limit information in support requests
 
-You control the Azure region and network configuration for the VM, who can administer it, how Keycloak is
-configured, and how its data is protected, retained, backed up or deleted. You are responsible for informing
-your users about your identity service and for meeting privacy and data-protection obligations that apply to
-your deployment. The image alone does not guarantee data residency, regulatory compliance or digital sovereignty.
+If you send a support request, share only the contact and diagnostic information necessary to investigate it. Public GitHub issues are visible to everyone.
 
-## Contact
+Never share passwords, private keys, tokens, session cookies, credential files or unnecessary personal data. Redact logs before sharing them. Do not grant VM access simply to make a public report reproducible. See [support guidance](SUPPORT.md).
 
-For privacy questions about this Marketplace image, contact:
+## Confirm the publisher notice before release
 
-**Cotechnoe privacy contact:** ⚠️ To be confirmed before publication.
+For a privacy question, contact Cotechnoe at [support@cotechnoe.com](mailto:support@cotechnoe.com). Do not include personal records or diagnostic archives in an initial message.
 
-## Publisher publication checklist
+**⚠️ To be validated before publication:** the publisher-approved privacy notice, support-information handling and the correspondence between that notice and the image actually delivered.
 
-Before publishing this notice, confirm the publisher's legal entity and privacy contact, and document the
-retention and handling process for support requests. Also confirm that the statements above still match the
-released image and its configured integrations.
+Until that review is complete, this page is privacy guidance for a draft deployment journey, not the final Marketplace policy.

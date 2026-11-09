@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  line-height: 1.65;
+  color: #172b3a;
+  background: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+header {
+  border-bottom: 1px solid #c8d1d9;
+  background: #f3f6f8;
+}
+
+nav, main {
+  max-width: 64rem;
+  margin: auto;
+  padding: 1rem 1.5rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1.5rem;
+}
+
+main { padding-bottom: 4rem; }
+
+h1, h2, h3 { line-height: 1.25; }
+
+h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+
+h2 { margin-top: 2rem; }
+
+a { color: #064e96; text-underline-offset: .15em; }
+
+a:hover { text-decoration-thickness: .15em; }
+
+:focus-visible { outline: 3px solid #854c00; outline-offset: 3px; }
+
+blockquote {
+  margin: 1.5rem 0;
+  border-left: .3rem solid #854c00;
+  padding: .25rem 1rem;
+  background: #fff6e5;
+}
+
+li { margin-block: .5rem; }
+
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #c8d1d9;
+  padding: .65rem;
+  text-align: left;
+  vertical-align: top;
+  min-width: 9rem;
+}
+
+th { background: #f3f6f8; }
+
+p, li, td, th { overflow-wrap: anywhere; }
+
+pre { overflow-x: auto; padding: 1rem; background: #f3f6f8; }
+
+code { font-size: .95em; }
+
+.skip-link {
+  position: absolute;
+  top: -5rem;
+  left: 1rem;
+  padding: .5rem;
+  background: #fff;
+}
+
+.skip-link:focus { top: .5rem; }
+
+@media (max-width: 40rem) {
+  nav, main { padding-inline: 1rem; }
+}

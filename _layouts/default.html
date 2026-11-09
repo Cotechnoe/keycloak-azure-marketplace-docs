@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ page.lang | escape }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>{{ page.title | escape }}</title>
+    <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  </head>
+  <body>
+    {% if page.lang == "fr" %}
+      {% assign home = "/fr/" %}
+      {% assign quickstart = "/QUICKSTART-fr.html" %}
+      {% assign support = "/SUPPORT-fr.html" %}
+      {% assign privacy = "/PRIVACY-fr.html" %}
+    {% else %}
+      {% assign home = "/" %}
+      {% assign quickstart = "/QUICKSTART.html" %}
+      {% assign support = "/SUPPORT.html" %}
+      {% assign privacy = "/PRIVACY.html" %}
+    {% endif %}
+    <a class="skip-link" href="#main">{% if page.lang == "fr" %}Aller au contenu{% else %}Skip to content{% endif %}</a>
+    <header>
+      <nav aria-label="{% if page.lang == 'fr' %}Navigation principale{% else %}Main navigation{% endif %}">
+        <a href="{{ home | relative_url }}">{% if page.lang == "fr" %}Accueil{% else %}Home{% endif %}</a>
+        <a href="{{ quickstart | relative_url }}">{% if page.lang == "fr" %}Démarrage rapide{% else %}Quick start{% endif %}</a>
+        <a href="{{ support | relative_url }}">{% if page.lang == "fr" %}Assistance{% else %}Support{% endif %}</a>
+        <a href="{{ privacy | relative_url }}">{% if page.lang == "fr" %}Confidentialité{% else %}Privacy{% endif %}</a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      {{ content }}
+    </main>
+  </body>
+</html>
