@@ -8,6 +8,8 @@ La documentation sera bilingue anglais-français. Les noms de fichiers ci-dessou
 
 ## Parcours approuvé
 
+À la demande du lecteur, un quick-start anglais (`QUICKSTART.md`) complète l’accueil : cinq étapes synthétiques jusqu’au premier test de connexion applicative, liens vers les guides détaillés et arrêt explicite devant une procédure propre à l’image non vérifiée. Il ne remplace ni les sept guides ni la préparation à la production. Sa traduction fait partie de l’étape 4.
+
 | Ordre | Question de l’opérateur | Sujet et résultat attendu | Page proposée | Critères couverts |
 |---|---|---|---|---|
 | 1 | Le déploiement Azure est-il terminé et la VM est-elle prête ? | Vérifier les informations de déploiement visibles dans Azure, distinguer état de la ressource et état du service, relever les données de l’instance sans exposer de secrets, reconnaître un échec et savoir quoi collecter. Les indicateurs et chemins propres à l’image restent à vérifier. | `docs/01-verify-deployment.md` | Structure et tâches actionnables ; responsabilités distinctes ; vérification des faits et dépannages |

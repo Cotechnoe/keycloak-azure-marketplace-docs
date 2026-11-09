@@ -8,6 +8,10 @@ This documentation is for the Azure administrator or operator responsible for a 
 
 You do not need the publisher's build tools to use these guides. You do need permission to inspect your Azure deployment and an approved way to administer the VM.
 
+## Start with the quick start
+
+Use the [quick start](QUICKSTART.md) for a five-step route from deployment checks to a first test application sign-in. It links to the detailed procedures and explains when to stop if an image-specific instruction is not yet verified.
+
 ## Follow your post-deployment checklist
 
 | Step | Task | You are ready to continue when |

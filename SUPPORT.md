@@ -2,6 +2,8 @@
 
 [Documentation home](README.md)
 
+For the first setup checks, start with the [quick start](QUICKSTART.md).
+
 > **Pre-release draft.** The application is not yet released on Microsoft Marketplace. Support routes and image-specific procedures must be rechecked before publication; ⚠️ to be validated. No response-time guarantee or support SLA is stated here.
 
 ## Choose the right starting point
