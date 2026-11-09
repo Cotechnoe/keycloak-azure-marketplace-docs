@@ -1,6 +1,8 @@
 # Operate your Keycloak VM after deployment
 
-> **Pre-release draft — not ready for production use.** The application has not been released on Microsoft Marketplace. Deployment work is in progress. The target image will be confirmed later. Image-specific instructions have not been tested for this documentation; ⚠️ to be validated. The French edition is not yet available.
+English | [Français](README-fr.md)
+
+> **Pre-release draft — not ready for production use.** The application has not been released on Microsoft Marketplace. Deployment work is in progress. The target image will be confirmed later. Image-specific instructions have not been tested for this documentation; ⚠️ to be validated.
 
 **Draft review date:** 2026-11-09.
 
@@ -46,7 +48,7 @@ These are operational responsibilities, not a replacement for your agreements wi
 - Keycloak's [official administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html) describes upstream capabilities. A capability is not necessarily configured or verified in this offer.
 - Applications, directories and external identity providers must be assessed and integrated separately. This documentation does not promise a bundled integration.
 - Sections marked **⚠️ to be validated** are not instructions to execute on a production VM. Stop at that point and [request clarification](SUPPORT.md).
-- English is being drafted first. Translation, rendered-site validation and execution on the selected image remain separate delivery steps.
+- English is the reference language; a French translation is available. Rendered-site validation and execution on the selected image remain separate delivery steps.
 
 ## Protect information when requesting help
 

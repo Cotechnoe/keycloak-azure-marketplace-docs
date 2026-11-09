@@ -1,5 +1,7 @@
 # Verify your deployment
 
+English | [Français](01-verify-deployment-fr.md)
+
 [Documentation home](../README.md)
 
 > **Pre-release draft.** No target image has been selected for these guides. Application-readiness commands and image-specific completion indicators are ⚠️ to be validated. This page does not certify your VM as ready.

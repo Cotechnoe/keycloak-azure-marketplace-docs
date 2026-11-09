@@ -1,5 +1,7 @@
 # Operate, protect and recover your deployment
 
+English | [Français](06-operate-and-recover-fr.md)
+
 [Documentation home](../README.md)
 
 > **Pre-release draft.** Backup, restoration, update and recovery procedures for the target image are ⚠️ to be validated. This page provides an operations checklist, not executable recovery commands. No Azure service mentioned here is claimed to be enabled or bundled with the offer.

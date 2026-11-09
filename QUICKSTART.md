@@ -1,5 +1,7 @@
 # Quick start: reach your first application sign-in
 
+English | [Français](QUICKSTART-fr.md)
+
 [Documentation home](README.md)
 
 > **Pre-release draft.** The application has not been released on Microsoft Marketplace. The target image is not yet confirmed. Credential retrieval, service addresses and image-specific commands are **⚠️ to be validated**. This quick start is a short route through the guides, not a tested deployment procedure.

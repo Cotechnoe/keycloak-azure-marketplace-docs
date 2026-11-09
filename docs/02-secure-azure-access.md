@@ -1,5 +1,7 @@
 # Secure your Azure administration access
 
+English | [Français](02-secure-azure-access-fr.md)
+
 [Documentation home](../README.md)
 
 > **Pre-release draft.** The image's supported connection method, account details and effective network requirements are ⚠️ to be validated. This guide recommends access-control practices; it does not prescribe an unverified port or Azure role for the offer.

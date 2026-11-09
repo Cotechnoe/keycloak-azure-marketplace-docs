@@ -1,5 +1,7 @@
 # Troubleshoot and request help
 
+English | [Français](07-troubleshoot-and-get-support-fr.md)
+
 [Documentation home](../README.md)
 
 > **Pre-release draft.** Image-specific diagnostic commands, log paths and recovery actions are ⚠️ to be validated. This guide provides non-destructive triage and escalation, not a tested repair procedure.

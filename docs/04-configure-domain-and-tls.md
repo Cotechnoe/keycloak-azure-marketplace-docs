@@ -1,5 +1,7 @@
 # Configure your domain and trusted HTTPS
 
+English | [Français](04-configure-domain-and-tls-fr.md)
+
 [Documentation home](../README.md)
 
 > **Pre-release draft.** The image-specific hostname and certificate procedure is ⚠️ to be validated. No command, certificate issuer, challenge method or renewal mechanism is assumed to work for the target image.

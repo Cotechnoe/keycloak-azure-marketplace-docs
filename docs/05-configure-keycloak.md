@@ -1,5 +1,7 @@
 # Configure Keycloak for your organization
 
+English | [Français](05-configure-keycloak-fr.md)
+
 [Documentation home](../README.md)
 
 > **Pre-release draft.** This is an organization-configuration checklist based on upstream Keycloak guidance, not a tested integration for this offer. Console labels, supported integrations and the target release are ⚠️ to be validated.

@@ -1,5 +1,7 @@
 # Review privacy considerations for your deployment
 
+English | [Français](PRIVACY-fr.md)
+
 [Documentation home](README.md)
 
 > **Pre-release draft — not a finalized Marketplace privacy policy.** The application has not been released on Microsoft Marketplace. The target image and its data flows are ⚠️ to be validated. This page must not be used as evidence of a legal or technical compliance review.

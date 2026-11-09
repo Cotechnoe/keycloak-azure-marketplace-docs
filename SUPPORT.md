@@ -1,5 +1,7 @@
 # Request help with your deployment
 
+English | [Français](SUPPORT-fr.md)
+
 [Documentation home](README.md)
 
 For the first setup checks, start with the [quick start](QUICKSTART.md).

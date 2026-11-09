@@ -78,3 +78,13 @@ Les pages suivantes sont des sources primaires consultées pour cadrer les thèm
 - Le dépôt documentaire ne possède pas de Makefile ni de générateur de site sur cette base. Aucun `make check`, build HTML ou test VM n’est revendiqué.
 - Aucune modification du code d’image ou des contrôles de certification ; aucun test de certification requis pour qualifier ces changements exclusivement documentaires.
 - Ce livrable clôt la rédaction anglaise du brouillon, pas sa qualification opérationnelle ni la publication. La cible reportée empêche encore la validation des procédures propres à l’image ; les étapes 5 à 7 restent ouvertes.
+
+## Livraison de l’étape 4 — 2026-11-09
+
+- Onze traductions françaises ajoutées : accueil, démarrage rapide, confidentialité, assistance et sept guides. Suffixe `-fr.md` ; anglais conservé comme référence.
+- Chaque paire possède des liens EN/FR réciproques. Tous les liens de parcours, d’accueil, d’assistance et de confidentialité restent dans la langue choisie. Les URL des sources primaires sont identiques dans les deux langues.
+- L’accueil anglais ne présente plus la traduction comme indisponible. Les avertissements de prépublication et les réserves sur les procédures propres à l’image sont conservés ; la traduction ne les qualifie pas.
+- Relecture de traduction effectuée contre les pages anglaises : responsabilités, conditions d’arrêt, protection des identifiants, prérequis HTTPS, maintien d’un administrateur fonctionnel et isolement de la restauration conservés. Le terme Keycloak `realm` et les noms de services ne sont pas renommés.
+- Contrôle Python ponctuel en lecture seule : **réussi** — onze paires EN/FR, 22 pages publiques, 142 liens locaux résolus ; sélecteurs de langue réciproques, liens internes dans la langue choisie, correspondance ordonnée des liens et sources, parité structurelle des titres, listes, tableaux et avertissements, et numérotation identique.
+- Parité des blocs de commandes vérifiée : aucun exemple exécutable dans l’une ou l’autre langue. Aucun contrôle HTTP externe, rendu HTML ou test VM effectué à cette étape.
+- Aucun changement du code d’image ou des contrôles de certification. Les étapes 5 à 7 restent ouvertes ; aucun choix d’image ni publication n’est impliqué par cette livraison.
