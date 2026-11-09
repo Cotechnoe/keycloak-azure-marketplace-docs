@@ -1,6 +1,10 @@
+---
+title: Vérifier votre déploiement
+lang: fr
+---
 # Vérifier votre déploiement
 
-[English](01-verify-deployment.md) | Français
+[English](01-verify-deployment.md) · Français
 
 [Accueil de la documentation](../README-fr.md)
 

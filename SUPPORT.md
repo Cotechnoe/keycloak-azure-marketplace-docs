@@ -1,6 +1,9 @@
+---
+title: Request help with your deployment
+---
 # Request help with your deployment
 
-English | [Français](SUPPORT-fr.md)
+English · [Français](SUPPORT-fr.md)
 
 [Documentation home](README.md)
 

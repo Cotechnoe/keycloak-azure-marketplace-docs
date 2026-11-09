@@ -122,3 +122,37 @@ Les 19 URL contrôlées sont les références publiques des pages : les dix page
 - Les liens requis par le listing Marketplace ne sont pas qualifiés par un contrôle de fichiers locaux ; aucune publication ou vérification Partner Center n’est réalisée.
 - Aucun test VM ou choix d’image ; l’étape 5 reste en attente de la cible. Aucune revue indépendante par un exploitant ni PR ; l’étape 7 reste ouverte.
 - L’étape 6 reste **non cochée** : le sous-ensemble local est validé, pas l’ensemble du critère de livraison.
+
+## Configuration du site Jekyll et validation réelle locale — 2026-11-09
+
+Le demandeur autorise la configuration locale du site sans publication et choisit explicitement Jekyll.
+
+### Livraison
+
+- Gemfile et verrou de dépendances, configuration Jekyll, gabarit bilingue et CSS local ; les versions directes de rendu sont vérifiées dans la [matrice GitHub Pages](https://pages.github.com/versions/).
+- Conteneur Ruby vérifié depuis les tags officiels et fixé par empreinte ; aucune modification du Ruby système. Gems et sortie `_site/` ignorées par Git.
+- Métadonnées sur les 22 sources canoniques, accueil anglais sous `/` et français sous `/fr/`, sous-chemin projet conservé. Les liens source `.md` restent lisibles sur GitHub et sont résolus vers les URL HTML par `jekyll-relative-links`.
+- Navigation persistante dans la langue choisie, lien d’évitement vers le contenu, mise en page adaptable et tableaux défilant dans leur propre conteneur sur écran étroit.
+- Interface `make setup`, `make build`, `make check`, `make serve` ; guides contributeurs EN/FR exclus du site. Aucun workflow, push, changement des paramètres Pages ou déploiement.
+- Validateur Python sans dépendance supplémentaire et six tests de régression sur copies isolées : site valide, traduction absente, lien erroné, navigation dans la mauvaise langue, exposition d’un fichier interne et cible du lien d’évitement absente.
+
+### Vérifications exécutées
+
+| Commande ou contrôle | Résultat |
+|---|---|
+| `make -C docs/keycloak-azure-marketplace-docs setup` depuis le dépôt d’ingénierie | **Réussi :** conteneur récupéré, gems installées, verrou généré. |
+| `make -C docs/keycloak-azure-marketplace-docs check` | **Réussi :** 22 pages, onze paires EN/FR ; 274 liens locaux HTML/CSS/fragments, dix tableaux et dix cases non cochées ; sources/rendu, titres, langues, avertissements, sélecteurs et navigation contrôlés ; six tests de régression réussis. |
+| `bash -n docs/keycloak-azure-marketplace-docs/scripts/site.sh` | **Réussi.** Shellcheck n’est pas installé sur le poste ; aucun résultat Shellcheck revendiqué. |
+| `make -C docs/keycloak-azure-marketplace-docs serve` | **Démarrage réussi :** page d’accueil servie en HTTP 200 au sous-chemin configuré, publication du port liée seulement à `127.0.0.1`. Conteneur arrêté volontairement après les tests ; l’arrêt explicite remonte un code non nul à Make, pas un échec du build. |
+| Firefox local isolé, piloté par WebDriver BiDi | **Réussi :** accueils EN/FR, démarrage rapide FR et dépannage FR, chacun à 1280 et 390 pixels ; langue et titre principal, CSS chargé, retour à la ligne du menu, absence de débordement horizontal du document, tableaux contenus, avertissement et cinq cases du démarrage rapide vérifiés. Aller-retour réel via les liens de langue FR → EN → FR réussi. |
+| Captures Firefox | Huit captures locales conservées dans les fichiers de session ; inspection visuelle de l’accueil FR large, du démarrage rapide FR étroit et du dépannage FR étroit : titres lisibles, navigation visible, avertissements distincts. Pas de certification d’accessibilité ni test de tous les navigateurs. |
+
+Le build initial a détecté un écart réel de moteur : Kramdown interprétait la ligne de langue avec `|` comme un tableau. Un point médian remplace ce séparateur dans les deux langues. Les tests isolés ont aussi conduit à canonicaliser le chemin temporaire macOS dans leur préparation ; les sources opérateur n’ont pas changé de sens.
+
+### Réserves et état du suivi
+
+- L’installation signale Ruby Sass en fin de vie, dépendance de cette branche Jekyll ; le site emploie du CSS simple. Ruby signale également des changements futurs de bibliothèque standard. Ces avertissements sont consignés dans les guides contributeurs ; ils n’empêchent pas les tests exécutés et ne constituent pas une qualification de sécurité du moteur.
+- Le navigateur intégré ne pouvait pas inspecter l’aperçu précédent ; Firefox local isolé a permis de tester le site Jekyll réel sans contourner ses restrictions de dossiers.
+- Serveur et navigateur de test arrêtés ; aucune écoute de prévisualisation laissée active. Aucun contenu envoyé à un service de capture externe.
+- Le contrôle HTTP 19/19 des références publiques provient du contrôle précédent de cette session ; il n’est pas intégré au validateur local et n’a pas été rejoué ici.
+- L’étape 6 reste ouverte pour les URL publiques et les liens requis par le listing, impossibles à qualifier par un site seulement local. La partie build/rendu local est maintenant réalisée. Étape 5 toujours en attente de l’image, étape 7 encore ouverte.

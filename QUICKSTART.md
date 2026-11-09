@@ -1,6 +1,9 @@
+---
+title: "Quick start: reach your first application sign-in"
+---
 # Quick start: reach your first application sign-in
 
-English | [Français](QUICKSTART-fr.md)
+English · [Français](QUICKSTART-fr.md)
 
 [Documentation home](README.md)
 

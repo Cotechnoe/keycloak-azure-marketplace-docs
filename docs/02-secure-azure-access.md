@@ -1,6 +1,9 @@
+---
+title: Secure your Azure administration access
+---
 # Secure your Azure administration access
 
-English | [Français](02-secure-azure-access-fr.md)
+English · [Français](02-secure-azure-access-fr.md)
 
 [Documentation home](../README.md)
 

@@ -1,6 +1,9 @@
+---
+title: Complete your initial Keycloak access
+---
 # Complete your initial Keycloak access
 
-English | [Français](03-complete-initial-access-fr.md)
+English · [Français](03-complete-initial-access-fr.md)
 
 [Documentation home](../README.md)
 

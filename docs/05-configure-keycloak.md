@@ -1,6 +1,9 @@
+---
+title: Configure Keycloak for your organization
+---
 # Configure Keycloak for your organization
 
-English | [Français](05-configure-keycloak-fr.md)
+English · [Français](05-configure-keycloak-fr.md)
 
 [Documentation home](../README.md)
 

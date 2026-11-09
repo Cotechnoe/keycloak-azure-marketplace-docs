@@ -1,6 +1,9 @@
+---
+title: Operate, protect and recover your deployment
+---
 # Operate, protect and recover your deployment
 
-English | [Français](06-operate-and-recover-fr.md)
+English · [Français](06-operate-and-recover-fr.md)
 
 [Documentation home](../README.md)
 

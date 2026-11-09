@@ -1,6 +1,10 @@
+---
+title: Finaliser votre premier accès à Keycloak
+lang: fr
+---
 # Finaliser votre premier accès à Keycloak
 
-[English](03-complete-initial-access.md) | Français
+[English](03-complete-initial-access.md) · Français
 
 [Accueil de la documentation](../README-fr.md)
 

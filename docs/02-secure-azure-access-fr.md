@@ -1,6 +1,10 @@
+---
+title: Sécuriser votre accès d’administration Azure
+lang: fr
+---
 # Sécuriser votre accès d’administration Azure
 
-[English](02-secure-azure-access.md) | Français
+[English](02-secure-azure-access.md) · Français
 
 [Accueil de la documentation](../README-fr.md)
 

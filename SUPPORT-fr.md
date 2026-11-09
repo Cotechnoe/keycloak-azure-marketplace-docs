@@ -1,6 +1,10 @@
+---
+title: Demander de l’aide pour votre déploiement
+lang: fr
+---
 # Demander de l’aide pour votre déploiement
 
-[English](SUPPORT.md) | Français
+[English](SUPPORT.md) · Français
 
 [Accueil de la documentation](README-fr.md)
 

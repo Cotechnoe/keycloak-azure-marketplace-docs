@@ -1,6 +1,10 @@
+---
+title: Examiner les aspects de confidentialité de votre déploiement
+lang: fr
+---
 # Examiner les aspects de confidentialité de votre déploiement
 
-[English](PRIVACY.md) | Français
+[English](PRIVACY.md) · Français
 
 [Accueil de la documentation](README-fr.md)
 

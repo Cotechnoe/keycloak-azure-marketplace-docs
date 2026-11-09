@@ -1,6 +1,11 @@
+---
+title: Exploiter votre VM Keycloak après le déploiement
+lang: fr
+permalink: /fr/
+---
 # Exploiter votre VM Keycloak après le déploiement
 
-[English](README.md) | Français
+[English](README.md) · Français
 
 > **Brouillon de prépublication — pas prêt pour la production.** L’application n’est pas encore publiée sur Microsoft Marketplace. Le travail de déploiement est en cours. L’image cible sera confirmée ultérieurement. Les instructions propres à l’image n’ont pas été testées pour cette documentation ; ⚠️ à valider.
 

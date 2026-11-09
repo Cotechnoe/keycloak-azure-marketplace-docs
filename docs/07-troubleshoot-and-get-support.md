@@ -1,6 +1,9 @@
+---
+title: Troubleshoot and request help
+---
 # Troubleshoot and request help
 
-English | [Français](07-troubleshoot-and-get-support-fr.md)
+English · [Français](07-troubleshoot-and-get-support-fr.md)
 
 [Documentation home](../README.md)
 

@@ -1,6 +1,10 @@
+---
+title: Diagnostiquer un problème et demander de l’aide
+lang: fr
+---
 # Diagnostiquer un problème et demander de l’aide
 
-[English](07-troubleshoot-and-get-support.md) | Français
+[English](07-troubleshoot-and-get-support.md) · Français
 
 [Accueil de la documentation](../README-fr.md)
 

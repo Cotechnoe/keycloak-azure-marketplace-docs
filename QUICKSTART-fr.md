@@ -1,6 +1,10 @@
+---
+title: "Démarrage rapide : réussir votre première connexion applicative"
+lang: fr
+---
 # Démarrage rapide : réussir votre première connexion applicative
 
-[English](QUICKSTART.md) | Français
+[English](QUICKSTART.md) · Français
 
 [Accueil de la documentation](README-fr.md)
 

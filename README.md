@@ -1,6 +1,10 @@
+---
+title: Operate your Keycloak VM after deployment
+permalink: /
+---
 # Operate your Keycloak VM after deployment
 
-English | [Français](README-fr.md)
+English · [Français](README-fr.md)
 
 > **Pre-release draft — not ready for production use.** The application has not been released on Microsoft Marketplace. Deployment work is in progress. The target image will be confirmed later. Image-specific instructions have not been tested for this documentation; ⚠️ to be validated.
 

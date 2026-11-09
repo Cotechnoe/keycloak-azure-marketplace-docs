@@ -1,6 +1,9 @@
+---
+title: Configure your domain and trusted HTTPS
+---
 # Configure your domain and trusted HTTPS
 
-English | [Français](04-configure-domain-and-tls-fr.md)
+English · [Français](04-configure-domain-and-tls-fr.md)
 
 [Documentation home](../README.md)
 

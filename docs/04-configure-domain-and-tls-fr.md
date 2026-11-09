@@ -1,6 +1,10 @@
+---
+title: Configurer votre domaine et HTTPS de confiance
+lang: fr
+---
 # Configurer votre domaine et HTTPS de confiance
 
-[English](04-configure-domain-and-tls.md) | Français
+[English](04-configure-domain-and-tls.md) · Français
 
 [Accueil de la documentation](../README-fr.md)
 

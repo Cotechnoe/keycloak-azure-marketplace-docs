@@ -1,6 +1,10 @@
+---
+title: Exploiter, protéger et restaurer votre déploiement
+lang: fr
+---
 # Exploiter, protéger et restaurer votre déploiement
 
-[English](06-operate-and-recover.md) | Français
+[English](06-operate-and-recover.md) · Français
 
 [Accueil de la documentation](../README-fr.md)
 

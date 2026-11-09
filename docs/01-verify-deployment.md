@@ -1,6 +1,9 @@
+---
+title: Verify your deployment
+---
 # Verify your deployment
 
-English | [Français](01-verify-deployment-fr.md)
+English · [Français](01-verify-deployment-fr.md)
 
 [Documentation home](../README.md)
 

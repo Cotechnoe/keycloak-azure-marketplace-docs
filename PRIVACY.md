@@ -1,6 +1,9 @@
+---
+title: Review privacy considerations for your deployment
+---
 # Review privacy considerations for your deployment
 
-English | [Français](PRIVACY-fr.md)
+English · [Français](PRIVACY-fr.md)
 
 [Documentation home](README.md)
 
