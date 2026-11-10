@@ -1,38 +1,46 @@
 ---
-title: Review privacy considerations for your deployment
+title: Privacy policy — Cotechnoe offer with Keycloak™
 ---
-# Review privacy considerations for your deployment
+# Privacy policy — Cotechnoe offer with Keycloak™
 
 English · [Français](PRIVACY-fr.md)
 
 [Documentation home](README.md)
 
-> **Pre-release draft — not a finalized Marketplace privacy policy.** The application has not been released on Microsoft Marketplace. The target image and its data flows are ⚠️ to be validated. This page must not be used as evidence of a legal or technical compliance review.
+- **Publisher:** Cotechnoe inc.
+- **Contact:** [support@cotechnoe.com](mailto:support@cotechnoe.com)
+- **Last updated:** 2026-11-10
 
-## Review the data your identity service handles
+## 1. Scope
 
-Keycloak's [administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html) describes users, credentials, attributes, roles and sessions. Review which information your own configuration collects and exposes to applications.
+This policy describes Cotechnoe's practices regarding customer data for its virtual machine offer with Keycloak. It distinguishes data in your deployed VM from information you voluntarily send when contacting Cotechnoe.
 
-Identify who can administer the service, which systems receive identity information, how logs and backups are protected, and how your organization handles access, retention and deletion. The deployment does not by itself establish regulatory compliance or data residency.
+## 2. Data in your virtual machine
 
-**⚠️ To be validated for the target image:** actual stored data and log locations, default logging, credential handling, outbound connections, telemetry and any publisher access. This draft does not assert that a review of those behaviors has been completed.
+**Cotechnoe does not collect, use or store data from your deployed VM.** This statement concerns Cotechnoe as publisher, not the processing performed by your identity service or by third-party services you use.
 
-## Review Azure and connected-service terms
+Your VM runs in your Azure subscription. Keycloak processes identity information according to your configuration, including user accounts, credentials, attributes, roles and sessions. These application data remain under your administration; they are not data collected by Cotechnoe. See the [Keycloak administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html).
 
-Microsoft's [shared responsibility guidance](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility) describes the distinction between the platform and the systems and data you operate. Review the [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement) and the terms applicable to your Azure subscription.
+You are responsible for configuring access, connected applications, logging, backups, retention and deletion in your environment, and for meeting the data-protection obligations applicable to your use.
 
-For each application, directory, identity provider, certificate authority, DNS provider, monitoring service or backup destination you configure, review its data flows and privacy terms separately. Do not assume those services are part of the image or subject to a single privacy notice.
+## 3. Information you send to support
 
-## Limit information in support requests
+Support correspondence is separate from the data in your VM. If you email [support@cotechnoe.com](mailto:support@cotechnoe.com), you provide your email address and the contents of your message, including any name or technical details you choose to include. This information is used to respond to your request.
 
-If you send a support request, share only the contact and diagnostic information necessary to investigate it. Public GitHub issues are visible to everyone.
+Send only what is necessary to describe your question. Never send passwords, private keys, tokens, session cookies, credential files, database exports or unnecessary personal data. Redact diagnostics before sharing them. See the [support guidance](SUPPORT.md).
 
-Never share passwords, private keys, tokens, session cookies, credential files or unnecessary personal data. Redact logs before sharing them. Do not grant VM access simply to make a public report reproducible. See [support guidance](SUPPORT.md).
+If you open a public GitHub issue, your account name and the information you post are publicly visible. Review [GitHub's Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
-## Confirm the publisher notice before release
+For questions about information you have sent, or to request access, correction or deletion, contact [support@cotechnoe.com](mailto:support@cotechnoe.com). Do not include personal records or diagnostic archives in an initial message.
 
-For a privacy question, contact Cotechnoe at [support@cotechnoe.com](mailto:support@cotechnoe.com). Do not include personal records or diagnostic archives in an initial message.
+## 4. Microsoft Azure and connected services
 
-**⚠️ To be validated before publication:** the publisher-approved privacy notice, support-information handling and the correspondence between that notice and the image actually delivered.
+Microsoft Azure and the services you connect have their own data-processing practices and terms. This policy does not state that those services collect no information.
 
-Until that review is complete, this page is privacy guidance for a draft deployment journey, not the final Marketplace policy.
+Review the [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement) and [shared responsibility guidance](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility). Review separately the terms of each application, directory, identity provider, certificate authority, DNS provider, monitoring service or backup destination you configure.
+
+## 5. Contact and policy updates
+
+For privacy questions concerning Cotechnoe's offer or your support correspondence, contact [support@cotechnoe.com](mailto:support@cotechnoe.com). The date above identifies the latest revision of this policy.
+
+> **⚠️ Separate release status:** this policy describes the publisher's practices; it does not certify the image, establish regulatory compliance or announce Marketplace availability. The documentation journey remains a pre-release draft, with image-specific procedures still to be validated.

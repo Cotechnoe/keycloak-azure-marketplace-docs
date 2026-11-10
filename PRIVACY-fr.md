@@ -1,39 +1,47 @@
 ---
-title: Examiner les aspects de confidentialité de votre déploiement
+title: Politique de confidentialité — Offre Cotechnoe avec Keycloak™
 lang: fr
 ---
-# Examiner les aspects de confidentialité de votre déploiement
+# Politique de confidentialité — Offre Cotechnoe avec Keycloak™
 
 [English](PRIVACY.md) · Français
 
 [Accueil de la documentation](README-fr.md)
 
-> **Brouillon de prépublication — pas une politique de confidentialité Marketplace définitive.** L’application n’est pas encore publiée sur Microsoft Marketplace. L’image cible et ses flux de données sont ⚠️ à valider. Cette page ne doit pas servir de preuve d’un examen de conformité juridique ou technique.
+- **Éditeur :** Cotechnoe inc.
+- **Contact :** [support@cotechnoe.com](mailto:support@cotechnoe.com)
+- **Dernière mise à jour :** 2026-11-10
 
-## Examiner les données traitées par votre service d’identité
+## 1. Portée
 
-Le [guide d’administration Keycloak](https://www.keycloak.org/docs/latest/server_admin/index.html) décrit les utilisateurs, éléments d’authentification, attributs, rôles et sessions. Examinez les informations que votre propre configuration collecte et expose aux applications.
+Cette politique décrit les pratiques de Cotechnoe concernant les données des clients pour son offre de machine virtuelle avec Keycloak. Elle distingue les données de votre VM déployée des informations que vous transmettez volontairement lorsque vous contactez Cotechnoe.
 
-Identifiez qui peut administrer le service, quels systèmes reçoivent des informations d’identité, comment les journaux et sauvegardes sont protégés, et comment votre organisation gère l’accès, la conservation et la suppression. Le déploiement n’établit pas à lui seul la conformité réglementaire ou la résidence des données.
+## 2. Données de votre machine virtuelle
 
-**⚠️ À valider pour l’image cible :** emplacements réels des données et journaux, journalisation par défaut, traitement des éléments d’authentification, connexions sortantes, télémétrie et tout accès de l’éditeur. Ce brouillon n’affirme pas que l’examen de ces comportements est terminé.
+**Cotechnoe ne collecte, n’utilise ni ne stocke les données de votre VM déployée.** Cette déclaration concerne Cotechnoe en tant qu’éditeur, et non les traitements effectués par votre service d’identité ou les services tiers que vous utilisez.
 
-## Examiner les conditions Azure et des services connectés
+Votre VM s’exécute dans votre abonnement Azure. Keycloak traite les informations d’identité selon votre configuration, notamment les comptes utilisateurs, éléments d’authentification, attributs, rôles et sessions. Ces données applicatives restent sous votre administration ; ce ne sont pas des données collectées par Cotechnoe. Consultez le [guide d’administration Keycloak](https://www.keycloak.org/docs/latest/server_admin/index.html).
 
-Les [recommandations Microsoft sur la responsabilité partagée](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility) distinguent la plateforme des systèmes et données que vous exploitez. Consultez la [Déclaration de confidentialité Microsoft](https://www.microsoft.com/en-us/privacy/privacystatement) et les conditions applicables à votre abonnement Azure.
+Vous êtes responsable de la configuration des accès, des applications connectées, de la journalisation, des sauvegardes, de la conservation et de la suppression dans votre environnement, ainsi que du respect des obligations de protection des données applicables à votre utilisation.
 
-Pour chaque application, annuaire, fournisseur d’identité, autorité de certification, fournisseur DNS, service de surveillance ou destination de sauvegarde que vous configurez, examinez séparément ses flux de données et ses conditions de confidentialité. Ne supposez pas que ces services font partie de l’image ou relèvent d’une notice unique.
+## 3. Informations transmises à l’assistance
 
-## Limiter les informations dans les demandes d’assistance
+Les échanges avec l’assistance sont distincts des données de votre VM. Si vous écrivez à [support@cotechnoe.com](mailto:support@cotechnoe.com), vous transmettez votre adresse courriel et le contenu du message, notamment tout nom ou détail technique que vous choisissez d’y inclure. Ces informations servent à répondre à votre demande.
 
-Dans une demande d’assistance, ne partagez que les informations de contact et de diagnostic nécessaires à l’examen. Les issues GitHub publiques sont visibles de tous.
+Ne transmettez que les informations nécessaires pour décrire votre question. N’envoyez jamais de mots de passe, clés privées, jetons, cookies de session, fichiers d’identifiants, exports de base de données ou données personnelles inutiles. Expurgez les diagnostics avant de les partager. Consultez les [consignes d’assistance](SUPPORT-fr.md).
 
-Ne partagez jamais de mots de passe, clés privées, jetons, cookies de session, fichiers d’identifiants ou données personnelles inutiles. Expurgez les journaux avant de les partager. N’accordez pas d’accès à la VM uniquement pour rendre reproductible un signalement public. Consultez les [consignes d’assistance](SUPPORT-fr.md).
+Si vous ouvrez une issue GitHub publique, votre nom de compte et les informations publiées sont visibles de tous. Consultez la [Déclaration de confidentialité GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
-## Confirmer la notice de l’éditeur avant publication
+Pour toute question sur les informations transmises, ou pour demander leur accès, leur rectification ou leur suppression, contactez [support@cotechnoe.com](mailto:support@cotechnoe.com). N’incluez pas de dossiers personnels ou d’archives de diagnostic dans un premier message.
 
-Pour une question de confidentialité, contactez Cotechnoe à [support@cotechnoe.com](mailto:support@cotechnoe.com). N’incluez pas de dossiers personnels ou d’archives de diagnostic dans un premier message.
+## 4. Microsoft Azure et services connectés
 
-**⚠️ À valider avant publication :** notice de confidentialité approuvée par l’éditeur, traitement des informations d’assistance et correspondance entre cette notice et l’image effectivement livrée.
+Microsoft Azure et les services que vous connectez ont leurs propres pratiques et conditions de traitement des données. Cette politique n’affirme pas que ces services ne collectent aucune information.
 
-Avant la fin de cet examen, cette page reste un guide de confidentialité pour un parcours de déploiement en brouillon, pas la politique Marketplace définitive.
+Consultez la [Déclaration de confidentialité Microsoft](https://www.microsoft.com/en-us/privacy/privacystatement) et les [recommandations sur la responsabilité partagée](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility). Examinez séparément les conditions de chaque application, annuaire, fournisseur d’identité, autorité de certification, fournisseur DNS, service de surveillance ou destination de sauvegarde que vous configurez.
+
+## 5. Contact et mises à jour de la politique
+
+Pour toute question de confidentialité concernant l’offre de Cotechnoe ou vos échanges avec l’assistance, contactez [support@cotechnoe.com](mailto:support@cotechnoe.com). La date ci-dessus indique la dernière révision de cette politique.
+
+> **⚠️ Statut de livraison distinct :** cette politique décrit les pratiques de l’éditeur ; elle ne certifie pas l’image, n’établit pas la conformité réglementaire et n’annonce pas une disponibilité Marketplace. Le parcours documentaire reste un brouillon de prépublication, dont les procédures propres à l’image restent à valider.
