@@ -7,8 +7,6 @@ English · [Français](03-complete-initial-access-fr.md)
 
 [Documentation home](../README.md)
 
-> **Pre-release draft.** Credential retrieval, the initial console address and the exact permanent-administrator procedure for this image are ⚠️ to be validated. Do not guess credentials, copy commands from another image, or treat this page as a tested bootstrap procedure.
-
 ## Before you start
 
 - Have [approved administration access](02-secure-azure-access.md).

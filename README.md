@@ -6,9 +6,7 @@ permalink: /
 
 English · [Français](README-fr.md)
 
-> **Pre-release draft — not ready for production use.** The application has not been released on Microsoft Marketplace. Deployment work is in progress. The target image will be confirmed later. Image-specific instructions have not been tested for this documentation; ⚠️ to be validated.
-
-**Draft review date:** 2026-11-09.
+**Review date:** 2026-11-10.
 
 This documentation is for the Azure administrator or operator responsible for a VM deployed from the Cotechnoe offer. Start here after deploying your VM. It is not a sign-in guide for people using your organization's applications.
 
@@ -48,7 +46,7 @@ An Azure VM is an infrastructure-as-a-service resource. Microsoft's [shared resp
 
 These are operational responsibilities, not a replacement for your agreements with Microsoft or Cotechnoe. Do not assume the image includes managed backups, Azure Monitor guest collection, update management, high availability or a support SLA.
 
-## Know the limits of this draft
+## Know the limits of this documentation
 
 - No image version, operating-system version, commercial display name, Marketplace plan, price or supported VM size is established by these guides.
 - Keycloak's [official administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html) describes upstream capabilities. A capability is not necessarily configured or verified in this offer.

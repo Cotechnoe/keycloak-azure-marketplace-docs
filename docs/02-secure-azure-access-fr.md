@@ -8,8 +8,6 @@ lang: fr
 
 [Accueil de la documentation](../README-fr.md)
 
-> **Brouillon de prépublication.** La méthode de connexion prise en charge par l’image, les détails des comptes et les besoins réseau effectifs sont ⚠️ à valider. Ce guide recommande des pratiques de contrôle d’accès ; il ne prescrit aucun port ou rôle Azure non vérifié pour l’offre.
-
 ## Avant de commencer
 
 Identifiez votre VM avec [Vérifier votre déploiement](01-verify-deployment-fr.md). Sollicitez un administrateur Azure autorisé si vous ne pouvez pas examiner les accès ou le réseau. Prévoyez un accès de secours avant de modifier une connexion existante.

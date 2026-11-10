@@ -43,5 +43,3 @@ Consultez la [Déclaration de confidentialité Microsoft](https://www.microsoft.
 ## 5. Contact et mises à jour de la politique
 
 Pour toute question de confidentialité concernant l’offre de Cotechnoe ou vos échanges avec l’assistance, contactez [support@cotechnoe.com](mailto:support@cotechnoe.com). La date ci-dessus indique la dernière révision de cette politique.
-
-> **⚠️ Statut de livraison distinct :** cette politique décrit les pratiques de l’éditeur ; elle ne certifie pas l’image, n’établit pas la conformité réglementaire et n’annonce pas une disponibilité Marketplace. Le parcours documentaire reste un brouillon de prépublication, dont les procédures propres à l’image restent à valider.

@@ -7,8 +7,6 @@ English · [Français](04-configure-domain-and-tls-fr.md)
 
 [Documentation home](../README.md)
 
-> **Pre-release draft.** The image-specific hostname and certificate procedure is ⚠️ to be validated. No command, certificate issuer, challenge method or renewal mechanism is assumed to work for the target image.
-
 ## Before you start
 
 Have control of the intended DNS name, an authorized network operator, an approved certificate process and a maintenance window if the service is already in use. Preserve existing configuration and recovery access before changing an active deployment.
@@ -21,7 +19,7 @@ Have control of the intended DNS name, an authorized network operator, an approv
 4. Review the [Keycloak hostname guidance](https://www.keycloak.org/server/hostname). Keycloak's advertised service address must match the intended deployment.
 5. Have the operator apply only a hostname and certificate procedure verified for the target image. Do not combine examples for direct Keycloak TLS with a TLS-terminating reverse proxy without checking the actual architecture. See Keycloak's [reverse-proxy guidance](https://www.keycloak.org/server/reverseproxy).
 
-**⚠️ To be validated on the target image:** the hostname tool and syntax, certificate installation, affected services, restart behavior, any required network openings and the renewal procedure. Until these are established, this draft does not provide an executable configuration procedure.
+**⚠️ To be validated on the target image:** the hostname tool and syntax, certificate installation, affected services, restart behavior, any required network openings and the renewal procedure. Until these are established, this guide does not provide an executable configuration procedure.
 
 ## Verify the result
 

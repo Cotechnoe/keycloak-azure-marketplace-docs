@@ -7,8 +7,6 @@ English · [Français](07-troubleshoot-and-get-support-fr.md)
 
 [Documentation home](../README.md)
 
-> **Pre-release draft.** Image-specific diagnostic commands, log paths and recovery actions are ⚠️ to be validated. This guide provides non-destructive triage and escalation, not a tested repair procedure.
-
 ## Before you start
 
 Confirm the affected VM with its owner. Record when the problem began and the most recent change. If production is affected, follow your incident process and preserve relevant evidence before attempting a repair.
@@ -43,4 +41,4 @@ Never include passwords, private keys, tokens, authorization headers, cookies, c
 
 Do not rerun initialization, reset the database, remove the only working administrator, disable network restrictions or delete a VM/disk as an exploratory fix. Recovery actions require an approved, tested procedure for the actual image and a suitable backup or isolated test target.
 
-If this draft does not contain the needed image-specific check, report the gap. A missing procedure is not permission to improvise one on production data.
+If this guide does not contain the needed image-specific check, report the gap. A missing procedure is not permission to improvise one on production data.

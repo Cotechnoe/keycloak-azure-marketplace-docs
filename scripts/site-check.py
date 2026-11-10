@@ -129,7 +129,12 @@ def validate():
         require(page.main_count == 1 and page.tags.get("h1") == 1, f"{path}: landmark/h1")
         require(len(page.ids) == len(set(page.ids)), f"{path}: duplicate ids")
         require(page.noindex and not page.scripts, f"{path}: noindex or script policy")
-        require("⚠" in "".join(page.text), f"{path}: missing draft warning")
+        for warning in re.findall(r"^.*⚠.*$", bodies[source], re.M):
+            warning_text = re.sub(r"\*\*|`", "", warning)
+            warning_text = re.sub(r"^[-*] ", "", warning_text)
+            warning_text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", warning_text)
+            require(" ".join(warning_text.split()) in " ".join("".join(page.text).split()),
+                    f"{path}: missing technical warning")
         require(page.assets == [baseurl + "/assets/site.css"], f"{path}: local stylesheet")
         body = bodies[source]
         for level in (1, 2, 3):
@@ -198,7 +203,7 @@ def validate():
     print(f"PASS: {len(pages)} pages, 11 language pairs; {count} local HTML/CSS/fragment links.")
     print(f"PASS: {sum(p.tags.get('table', 0) for p in pages.values())} tables; "
           f"{sum(p.checkboxes for p in pages.values())} unchecked checkboxes.")
-    print("PASS: titles, landmarks, languages, reciprocal navigation, EN/FR parity, warnings.")
+    print("PASS: titles, landmarks, languages, reciprocal navigation, EN/FR parity, technical warnings.")
     print("PASS: no internal notes, build files, dependencies or scripts exposed.")
     print("Not validated: external HTTP, visual accessibility, public deployment or VM procedures.")
 

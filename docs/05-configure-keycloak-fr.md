@@ -8,8 +8,6 @@ lang: fr
 
 [Accueil de la documentation](../README-fr.md)
 
-> **Brouillon de prépublication.** Cette liste de contrôle de configuration organisationnelle repose sur les recommandations du projet Keycloak, pas sur une intégration testée pour cette offre. Les libellés de console, intégrations prises en charge et version cible sont ⚠️ à valider.
-
 ## Avant de commencer
 
 Disposez d’un [administrateur permanent](03-complete-initial-access-fr.md) vérifié, d’une [adresse de service de confiance](04-configure-domain-and-tls-fr.md), d’un responsable applicatif et d’un environnement de test ou realm de test approuvé. Ne testez pas de nouveaux paramètres d’authentification sur le seul accès d’administration fonctionnel.

@@ -7,8 +7,6 @@ English · [Français](01-verify-deployment-fr.md)
 
 [Documentation home](../README.md)
 
-> **Pre-release draft.** No target image has been selected for these guides. Application-readiness commands and image-specific completion indicators are ⚠️ to be validated. This page does not certify your VM as ready.
-
 ## Before you start
 
 Have the Azure subscription and resource group used for your deployment, permission to read the resources, and access to your organization's deployment record. If somebody else deployed the VM, ask them to identify it rather than selecting a resource by a similar name.

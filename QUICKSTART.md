@@ -7,8 +7,6 @@ English · [Français](QUICKSTART-fr.md)
 
 [Documentation home](README.md)
 
-> **Pre-release draft.** The application has not been released on Microsoft Marketplace. The target image is not yet confirmed. Credential retrieval, service addresses and image-specific commands are **⚠️ to be validated**. This quick start is a short route through the guides, not a tested deployment procedure.
-
 ## Before you start
 
 Have your Azure subscription and resource group, permission to inspect the deployed VM, an approved way to obtain management access, and access to the DNS and certificate owners. You do not need an external application to complete the administrative milestone. Image-specific instructions must still be verified before execution.

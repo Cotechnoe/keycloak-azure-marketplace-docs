@@ -9,8 +9,6 @@ English · [Français](SUPPORT-fr.md)
 
 For the first setup checks, start with the [quick start](QUICKSTART.md).
 
-> **Pre-release draft.** The application is not yet released on Microsoft Marketplace. Support routes and image-specific procedures must be rechecked before publication; ⚠️ to be validated. No response-time guarantee or support SLA is stated here.
-
 ## Choose the right starting point
 
 | Need | Starting point |
@@ -30,6 +28,6 @@ This routing guidance does not establish a contractual support entitlement. If s
 
 Public issues are visible to everyone. Do not attach credential files, database configuration, tokens, private keys, session cookies or full logs.
 
-For a private initial request, email [support@cotechnoe.com](mailto:support@cotechnoe.com) with a minimal description, not secrets or diagnostic archives. If investigation requires sensitive information, agree on a secure transfer method with the recipient first. No private diagnostic-upload facility is established by this draft.
+For a private initial request, email [support@cotechnoe.com](mailto:support@cotechnoe.com) with a minimal description, not secrets or diagnostic archives. If investigation requires sensitive information, agree on a secure transfer method with the recipient first. No private diagnostic-upload facility is established by this documentation.
 
 Read the [privacy notice](PRIVACY.md) before sharing information.

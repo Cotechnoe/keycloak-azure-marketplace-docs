@@ -8,8 +8,6 @@ lang: fr
 
 [Accueil de la documentation](../README-fr.md)
 
-> **Brouillon de prépublication.** Les commandes de diagnostic, chemins des journaux et actions de récupération propres à l’image sont ⚠️ à valider. Ce guide propose un diagnostic initial non destructif et une orientation vers les responsables appropriés, pas une procédure de réparation testée.
-
 ## Avant de commencer
 
 Confirmez la VM concernée avec son responsable. Consignez le début du problème et le changement le plus récent. Si la production est affectée, suivez votre processus d’incident et préservez les éléments utiles avant de tenter une réparation.
@@ -44,4 +42,4 @@ N’incluez jamais de mots de passe, clés privées, jetons, en-têtes d’autor
 
 Ne relancez pas l’initialisation, ne réinitialisez pas la base de données, ne supprimez pas le seul administrateur fonctionnel, ne désactivez pas les restrictions réseau et ne supprimez pas une VM ou un disque comme essai de correction. Les actions de récupération nécessitent une procédure approuvée et testée pour l’image réelle, ainsi qu’une sauvegarde adaptée ou une cible de test isolée.
 
-Si ce brouillon ne contient pas le contrôle propre à l’image nécessaire, signalez ce manque. L’absence de procédure n’autorise pas à en improviser une sur les données de production.
+Si ce guide ne contient pas le contrôle propre à l’image nécessaire, signalez ce manque. L’absence de procédure n’autorise pas à en improviser une sur les données de production.

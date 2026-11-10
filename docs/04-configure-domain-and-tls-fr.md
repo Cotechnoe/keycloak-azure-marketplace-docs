@@ -8,8 +8,6 @@ lang: fr
 
 [Accueil de la documentation](../README-fr.md)
 
-> **Brouillon de prépublication.** La procédure de nom d’hôte et de certificat propre à l’image est ⚠️ à valider. Aucune commande, autorité de certification, méthode de validation ou mécanisme de renouvellement n’est supposé fonctionner sur l’image cible.
-
 ## Avant de commencer
 
 Disposez du contrôle du nom DNS prévu, d’un exploitant réseau autorisé, d’un processus de certification approuvé et d’une fenêtre de maintenance si le service est déjà utilisé. Préservez la configuration existante et l’accès de secours avant de modifier un déploiement actif.
@@ -22,7 +20,7 @@ Disposez du contrôle du nom DNS prévu, d’un exploitant réseau autorisé, d�
 4. Consultez les [recommandations Keycloak sur le nom d’hôte](https://www.keycloak.org/server/hostname). L’adresse de service annoncée par Keycloak doit correspondre au déploiement prévu.
 5. Faites appliquer par l’exploitant uniquement une procédure de nom d’hôte et de certificat vérifiée pour l’image cible. Ne combinez pas des exemples de TLS directement dans Keycloak avec un proxy inverse terminant TLS sans vérifier l’architecture réelle. Consultez les [recommandations Keycloak sur le proxy inverse](https://www.keycloak.org/server/reverseproxy).
 
-**⚠️ À valider sur l’image cible :** outil et syntaxe du nom d’hôte, installation du certificat, services affectés, comportement au redémarrage, éventuelles ouvertures réseau et procédure de renouvellement. Tant que ces éléments ne sont pas établis, ce brouillon ne fournit pas de procédure de configuration exécutable.
+**⚠️ À valider sur l’image cible :** outil et syntaxe du nom d’hôte, installation du certificat, services affectés, comportement au redémarrage, éventuelles ouvertures réseau et procédure de renouvellement. Tant que ces éléments ne sont pas établis, ce guide ne fournit pas de procédure de configuration exécutable.
 
 ## Vérifier le résultat
 

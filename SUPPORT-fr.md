@@ -10,8 +10,6 @@ lang: fr
 
 Pour les premiers contrôles de mise en service, commencez par le [démarrage rapide](QUICKSTART-fr.md).
 
-> **Brouillon de prépublication.** L’application n’est pas encore publiée sur Microsoft Marketplace. Les canaux d’assistance et procédures propres à l’image doivent être revérifiés avant publication ; ⚠️ à valider. Aucun délai de réponse garanti ni accord de niveau de service (SLA) d’assistance n’est établi ici.
-
 ## Choisir le bon point de contact
 
 | Besoin | Point de contact |
@@ -31,6 +29,6 @@ Ces indications d’orientation ne créent aucun droit contractuel à l’assist
 
 Les issues publiques sont visibles de tous. Ne joignez pas de fichiers d’identifiants, configuration de base de données, jetons, clés privées, cookies de session ou journaux complets.
 
-Pour une première demande privée, écrivez à [support@cotechnoe.com](mailto:support@cotechnoe.com) avec une description minimale, sans secrets ni archives de diagnostic. Si l’examen nécessite des informations sensibles, convenez d’abord d’un moyen de transfert sécurisé avec le destinataire. Ce brouillon n’établit aucun dispositif privé de dépôt de diagnostics.
+Pour une première demande privée, écrivez à [support@cotechnoe.com](mailto:support@cotechnoe.com) avec une description minimale, sans secrets ni archives de diagnostic. Si l’examen nécessite des informations sensibles, convenez d’abord d’un moyen de transfert sécurisé avec le destinataire. Cette documentation n’établit aucun dispositif privé de dépôt de diagnostics.
 
 Lisez la [notice de confidentialité](PRIVACY-fr.md) avant de partager des informations.

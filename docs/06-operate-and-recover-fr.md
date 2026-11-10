@@ -8,8 +8,6 @@ lang: fr
 
 [Accueil de la documentation](../README-fr.md)
 
-> **Brouillon de prépublication.** Les procédures de sauvegarde, restauration, mise à jour et récupération pour l’image cible sont ⚠️ à valider. Cette page fournit une liste de contrôle d’exploitation, pas des commandes de récupération exécutables. Aucun service Azure cité n’est déclaré activé ou inclus dans l’offre.
-
 ## Avant de commencer
 
 Identifiez le responsable du service, l’exploitant Azure, l’administrateur Keycloak et les responsables applicatifs. Convenez d’un délai de récupération acceptable, d’une perte de données acceptable et d’une fenêtre de maintenance. Les [recommandations Microsoft sur l’architecture des VM](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/virtual-machines) couvrent la fiabilité et les dépendances ; elles ne rendent pas une VM unique hautement disponible.

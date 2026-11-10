@@ -7,8 +7,6 @@ English · [Français](05-configure-keycloak-fr.md)
 
 [Documentation home](../README.md)
 
-> **Pre-release draft.** This is an organization-configuration checklist based on upstream Keycloak guidance, not a tested integration for this offer. Console labels, supported integrations and the target release are ⚠️ to be validated.
-
 ## Before you start
 
 Have a verified [permanent administrator](03-complete-initial-access.md), [trusted service address](04-configure-domain-and-tls.md), an application owner and a test environment or approved test realm. Do not test new authentication settings on the only working administration path.

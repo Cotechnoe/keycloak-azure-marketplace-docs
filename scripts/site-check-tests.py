@@ -41,6 +41,11 @@ class SiteCheckTests(unittest.TestCase):
     def test_valid_site(self):
         self.validate()
 
+    def test_missing_technical_warning(self):
+        self.change("docs/04-configure-domain-and-tls.html", "⚠️", "")
+        with self.assertRaisesRegex(ValueError, "missing technical warning"):
+            self.validate()
+
     def test_missing_translation(self):
         (CHECK.SITE / "QUICKSTART-fr.html").unlink()
         with self.assertRaisesRegex(ValueError, "HTML pages"):

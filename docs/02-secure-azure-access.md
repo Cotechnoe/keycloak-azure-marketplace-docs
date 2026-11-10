@@ -7,8 +7,6 @@ English · [Français](02-secure-azure-access-fr.md)
 
 [Documentation home](../README.md)
 
-> **Pre-release draft.** The image's supported connection method, account details and effective network requirements are ⚠️ to be validated. This guide recommends access-control practices; it does not prescribe an unverified port or Azure role for the offer.
-
 ## Before you start
 
 Identify your VM using [Verify your deployment](01-verify-deployment.md). Arrange help from an authorized Azure administrator if you cannot review access or networking. Have a recovery route before modifying an existing connection.

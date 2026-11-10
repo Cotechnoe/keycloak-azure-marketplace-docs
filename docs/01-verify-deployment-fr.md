@@ -8,8 +8,6 @@ lang: fr
 
 [Accueil de la documentation](../README-fr.md)
 
-> **Brouillon de prépublication.** Aucune image cible n’a été sélectionnée pour ces guides. Les commandes de contrôle de l’application et les indicateurs d’achèvement propres à l’image sont ⚠️ à valider. Cette page ne certifie pas que votre VM est prête.
-
 ## Avant de commencer
 
 Munissez-vous de l’abonnement Azure et du groupe de ressources utilisés pour le déploiement, des autorisations de lecture des ressources et du dossier de déploiement de votre organisation. Si une autre personne a déployé la VM, demandez-lui de l’identifier plutôt que de sélectionner une ressource au nom similaire.

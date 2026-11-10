@@ -8,8 +8,6 @@ lang: fr
 
 [Accueil de la documentation](README-fr.md)
 
-> **Brouillon de prépublication.** L’application n’est pas encore publiée sur Microsoft Marketplace. L’image cible n’est pas encore confirmée. La récupération des identifiants, les adresses de service et les commandes propres à l’image sont **⚠️ à valider**. Ce démarrage rapide est un parcours court à travers les guides, pas une procédure de déploiement testée.
-
 ## Avant de commencer
 
 Munissez-vous de votre abonnement Azure et de votre groupe de ressources, des autorisations pour inspecter la VM déployée, d’un moyen approuvé d’obtenir l’accès d’administration et des coordonnées des responsables DNS et certificats. Aucune application externe n’est nécessaire pour terminer le jalon administratif. Les instructions propres à l’image doivent toujours être vérifiées avant exécution.

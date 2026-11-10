@@ -7,8 +7,6 @@ English · [Français](06-operate-and-recover-fr.md)
 
 [Documentation home](../README.md)
 
-> **Pre-release draft.** Backup, restoration, update and recovery procedures for the target image are ⚠️ to be validated. This page provides an operations checklist, not executable recovery commands. No Azure service mentioned here is claimed to be enabled or bundled with the offer.
-
 ## Before you start
 
 Identify the service owner, Azure operator, Keycloak administrator and application owners. Agree on an acceptable recovery time, acceptable data loss and a maintenance window. Microsoft's [VM architecture guidance](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/virtual-machines) covers reliability and dependencies; it does not make a single VM highly available.

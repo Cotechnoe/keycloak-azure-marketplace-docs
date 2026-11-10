@@ -8,8 +8,6 @@ lang: fr
 
 [Accueil de la documentation](../README-fr.md)
 
-> **Brouillon de prépublication.** La récupération des identifiants, l’adresse initiale de la console et la procédure exacte de création d’un administrateur permanent pour cette image sont ⚠️ à valider. Ne devinez pas les identifiants, ne copiez pas les commandes d’une autre image et ne considérez pas cette page comme une procédure d’initialisation testée.
-
 ## Avant de commencer
 
 - Disposez d’un [accès d’administration approuvé](02-secure-azure-access-fr.md).

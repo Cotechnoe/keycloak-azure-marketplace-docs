@@ -7,9 +7,7 @@ permalink: /fr/
 
 [English](README.md) · Français
 
-> **Brouillon de prépublication — pas prêt pour la production.** L’application n’est pas encore publiée sur Microsoft Marketplace. Le travail de déploiement est en cours. L’image cible sera confirmée ultérieurement. Les instructions propres à l’image n’ont pas été testées pour cette documentation ; ⚠️ à valider.
-
-**Date de révision du brouillon :** 2026-11-09.
+**Date de révision :** 2026-11-10.
 
 Cette documentation s’adresse à l’administrateur Azure ou à l’exploitant responsable d’une VM déployée depuis l’offre Cotechnoe. Commencez ici après le déploiement de votre VM. Il ne s’agit pas d’un guide de connexion destiné aux utilisateurs des applications de votre organisation.
 
@@ -49,7 +47,7 @@ Une VM Azure est une ressource d’infrastructure en tant que service. Les [reco
 
 Il s’agit de responsabilités d’exploitation, pas d’un remplacement de vos accords avec Microsoft ou Cotechnoe. Ne supposez pas que l’image comprend des sauvegardes gérées, une collecte de données du système invité par Azure Monitor, la gestion des mises à jour, la haute disponibilité ou un accord de niveau de service (SLA) d’assistance.
 
-## Connaître les limites de ce brouillon
+## Connaître les limites de cette documentation
 
 - Ces guides n’établissent aucune version d’image ou de système d’exploitation, aucun nom commercial affiché, plan Marketplace, prix ou taille de VM prise en charge.
 - Le [guide officiel d’administration Keycloak](https://www.keycloak.org/docs/latest/server_admin/index.html) décrit les capacités du projet amont. Une capacité n’est pas nécessairement configurée ou vérifiée dans cette offre.

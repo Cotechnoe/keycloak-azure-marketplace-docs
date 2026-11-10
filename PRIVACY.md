@@ -42,5 +42,3 @@ Review the [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy
 ## 5. Contact and policy updates
 
 For privacy questions concerning Cotechnoe's offer or your support correspondence, contact [support@cotechnoe.com](mailto:support@cotechnoe.com). The date above identifies the latest revision of this policy.
-
-> **⚠️ Separate release status:** this policy describes the publisher's practices; it does not certify the image, establish regulatory compliance or announce Marketplace availability. The documentation journey remains a pre-release draft, with image-specific procedures still to be validated.
