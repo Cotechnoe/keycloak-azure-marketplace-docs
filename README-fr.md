@@ -15,6 +15,8 @@ Les outils de construction de l’éditeur ne sont pas nécessaires pour suivre 
 
 ## Commencer par le démarrage rapide
 
+**Devant l’écran de connexion Keycloak ?** Suivez [Récupérer les identifiants initiaux et se connecter](docs/03-complete-initial-access-fr.md) pour la commande SSH, les champs d’identifiants et l’URL d’administration. Votre compte Linux SSH ou Azure n’est pas le compte Keycloak initial.
+
 Suivez le [démarrage rapide](QUICKSTART-fr.md) jusqu’au premier jalon : une administration permanente vérifiée. Une suite facultative distincte couvre la première connexion applicative lorsqu’un responsable applicatif est prêt. Les deux parcours s’arrêtent devant une instruction propre à l’image non vérifiée.
 
 ## Suivre votre liste de contrôle après déploiement
@@ -49,7 +51,7 @@ Il s’agit de responsabilités d’exploitation, pas d’un remplacement de vos
 
 ## Connaître les limites de cette documentation
 
-- Ces guides n’établissent aucune version d’image ou de système d’exploitation, aucun nom commercial affiché, plan Marketplace, prix ou taille de VM prise en charge.
+- Le guide d’accès initial indique la version d’image utilisée pour valider la connexion ; cela ne démontre pas une validation des autres versions. Ces guides n’établissent aucune version de système d’exploitation, aucun nom commercial affiché, plan Marketplace, prix ou taille de VM prise en charge.
 - Le [guide officiel d’administration Keycloak](https://www.keycloak.org/docs/latest/server_admin/index.html) décrit les capacités du projet amont. Une capacité n’est pas nécessairement configurée ou vérifiée dans cette offre.
 - Les applications, annuaires et fournisseurs d’identité externes doivent être évalués et intégrés séparément. Cette documentation ne promet aucune intégration incluse.
 - Les sections marquées **⚠️ à valider** ne sont pas des instructions à exécuter sur une VM de production. Arrêtez-vous à cet endroit et [demandez des précisions](SUPPORT-fr.md).

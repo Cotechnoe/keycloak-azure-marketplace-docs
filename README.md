@@ -14,6 +14,8 @@ You do not need the publisher's build tools to use these guides. You do need per
 
 ## Start with the quick start
 
+**At the Keycloak sign-in screen?** Follow [Retrieve the initial credentials and sign in](docs/03-complete-initial-access.md) for the SSH command, credential fields and administration URL. Your Linux SSH or Azure account is not the initial Keycloak account.
+
 Use the [quick start](QUICKSTART.md) to reach a first milestone: verified permanent administration. A separate, optional continuation covers a first application sign-in when an application owner is ready. Both routes stop at unverified image-specific instructions.
 
 ## Follow your post-deployment checklist
@@ -48,7 +50,7 @@ These are operational responsibilities, not a replacement for your agreements wi
 
 ## Know the limits of this documentation
 
-- No image version, operating-system version, commercial display name, Marketplace plan, price or supported VM size is established by these guides.
+- The initial-access guide identifies the image version used for its sign-in validation; this does not establish validation for other versions. No operating-system version, commercial display name, Marketplace plan, price or supported VM size is established by these guides.
 - Keycloak's [official administration guide](https://www.keycloak.org/docs/latest/server_admin/index.html) describes upstream capabilities. A capability is not necessarily configured or verified in this offer.
 - Applications, directories and external identity providers must be assessed and integrated separately. This documentation does not promise a bundled integration.
 - Sections marked **⚠️ to be validated** are not instructions to execute on a production VM. Stop at that point and [request clarification](SUPPORT.md).
